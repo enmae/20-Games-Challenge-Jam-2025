@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://06pacwgoo4wh"]
+
+[ext_resource type="PackedScene" uid="uid://gbuuwgqqie5d" path="res://assets/models/greybox/greybox.gltf" id="1_xwyt4"]
+[ext_resource type="PackedScene" uid="uid://bfywu8if32nt2" path="res://prefabs/character/character.tscn" id="2_mi44d"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_62ugy"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_cb6wy"]
+sky_material = SubResource("ProceduralSkyMaterial_62ugy")
+
+[sub_resource type="Environment" id="Environment_k5vq6"]
+background_mode = 2
+sky = SubResource("Sky_cb6wy")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Greybox" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_k5vq6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="greybox" parent="." instance=ExtResource("1_xwyt4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Character" parent="." instance=ExtResource("2_mi44d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.06789, -3.13972, -14.419)
+
+[editable path="greybox"]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfywu8if32nt2"]
+
+[ext_resource type="Script" uid="uid://dvckkaj4srg8p" path="res://prefabs/character/character.gd" id="1_up5c1"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tgg11"]
+friction = 0.1
+
+[sub_resource type="SphereMesh" id="SphereMesh_tgg11"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_tgg11"]
+
+[node name="Character" type="RigidBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_tgg11")
+lock_rotation = true
+script = ExtResource("1_up5c1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_tgg11")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_tgg11")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 1.65655, 2.61686)
