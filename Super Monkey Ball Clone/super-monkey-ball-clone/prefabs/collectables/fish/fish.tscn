@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dg2tjeo0eo4rf"]
+[gd_scene load_steps=4 format=3 uid="uid://dg2tjeo0eo4rf"]
 
 [ext_resource type="Script" uid="uid://dpj4nn1jgcbra" path="res://prefabs/collectables/fish/fish.gd" id="1_xlurk"]
+[ext_resource type="ArrayMesh" uid="uid://dbqjyul14lf00" path="res://assets/models/fish/fish_Mesh.res" id="2_36g2a"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_36g2a"]
 
@@ -9,3 +10,6 @@ script = ExtResource("1_xlurk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_36g2a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_36g2a")

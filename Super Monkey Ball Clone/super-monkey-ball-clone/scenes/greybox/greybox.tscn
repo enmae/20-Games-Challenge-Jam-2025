@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://06pacwgoo4wh"]
 
-[ext_resource type="PackedScene" uid="uid://gbuuwgqqie5d" path="res://assets/models/greybox/greybox.gltf" id="1_xwyt4"]
+[ext_resource type="PackedScene" uid="uid://r2hlbppgu20r" path="res://assets/models/greybox/greybox.gltf" id="1_xwyt4"]
 [ext_resource type="PackedScene" uid="uid://bfywu8if32nt2" path="res://prefabs/character/character.tscn" id="2_mi44d"]
 [ext_resource type="PackedScene" uid="uid://c8fgapv0b0xay" path="res://prefabs/death_zone/death_zone.tscn" id="4_7uk4v"]
 [ext_resource type="PackedScene" uid="uid://dg2tjeo0eo4rf" path="res://prefabs/collectables/fish/fish.tscn" id="4_rss2v"]
@@ -28,8 +28,6 @@ environment = SubResource("Environment_k5vq6")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
-
-[node name="greybox" parent="." instance=ExtResource("1_xwyt4")]
 
 [node name="Character" parent="." instance=ExtResource("2_mi44d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.06789, -3.13972, -14.419)
@@ -344,5 +342,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5253, -36.0339, -5.52898)
 
 [node name="LevelTimer" parent="." instance=ExtResource("6_51pxw")]
 
-[editable path="greybox"]
+[node name="greybox" parent="." instance=ExtResource("1_xwyt4")]
+
+[node name="RotatingPlatform" parent="greybox" index="1"]
+visible = false
+
 [editable path="DeathZone"]
+[editable path="greybox"]

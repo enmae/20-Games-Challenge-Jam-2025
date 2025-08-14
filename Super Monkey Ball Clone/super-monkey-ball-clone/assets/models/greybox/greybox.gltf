@@ -8,18 +8,75 @@
 		{
 			"name":"Scene",
 			"nodes":[
-				0
+				0,
+				1,
+				2,
+				3
 			]
 		}
 	],
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"LevelGeo-col",
+			"name":"LevelGeo1-col",
 			"scale":[
 				5.455589771270752,
 				1,
 				5.455589771270752
+			]
+		},
+		{
+			"mesh":1,
+			"name":"RotatingPlatform",
+			"rotation":[
+				0,
+				0.28324422240257263,
+				0,
+				0.9590478539466858
+			],
+			"scale":[
+				5.455589771270752,
+				1,
+				5.455589771270752
+			],
+			"translation":[
+				21.394224166870117,
+				-35.68467712402344,
+				24.037412643432617
+			]
+		},
+		{
+			"mesh":2,
+			"name":"LevelGeo2-col",
+			"scale":[
+				5.455589771270752,
+				1,
+				12.784536361694336
+			],
+			"translation":[
+				21.394224166870117,
+				-35.68467712402344,
+				62.11463165283203
+			]
+		},
+		{
+			"mesh":1,
+			"name":"RotatingPlatform.001",
+			"rotation":[
+				0,
+				0.28324422240257263,
+				0,
+				0.9590478539466858
+			],
+			"scale":[
+				5.455589771270752,
+				1,
+				5.455589771270752
+			],
+			"translation":[
+				21.394224166870117,
+				-35.68467712402344,
+				100.74177551269531
 			]
 		}
 	],
@@ -41,7 +98,7 @@
 	],
 	"meshes":[
 		{
-			"name":"LevelGeo",
+			"name":"LevelGeo1",
 			"primitives":[
 				{
 					"attributes":{
@@ -50,6 +107,34 @@
 						"TEXCOORD_0":2
 					},
 					"indices":3,
+					"material":0
+				}
+			]
+		},
+		{
+			"name":"RotatingPlatform",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":4,
+						"NORMAL":5,
+						"TEXCOORD_0":6
+					},
+					"indices":7,
+					"material":0
+				}
+			]
+		},
+		{
+			"name":"LevelGeo2",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":8,
+						"NORMAL":9,
+						"TEXCOORD_0":10
+					},
+					"indices":7,
 					"material":0
 				}
 			]
@@ -62,7 +147,7 @@
 			"count":84,
 			"max":[
 				6.843047142028809,
-				15.261554718017578,
+				4.844735145568848,
 				1
 			],
 			"min":[
@@ -89,6 +174,68 @@
 			"componentType":5123,
 			"count":156,
 			"type":"SCALAR"
+		},
+		{
+			"bufferView":4,
+			"componentType":5126,
+			"count":24,
+			"max":[
+				2.9215235710144043,
+				1,
+				0.7877209186553955
+			],
+			"min":[
+				-2.9215235710144043,
+				-1,
+				-0.7877209186553955
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":5,
+			"componentType":5126,
+			"count":24,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":6,
+			"componentType":5126,
+			"count":24,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":7,
+			"componentType":5123,
+			"count":36,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":8,
+			"componentType":5126,
+			"count":24,
+			"max":[
+				2.9215235710144043,
+				1,
+				0.7877209186553955
+			],
+			"min":[
+				-2.9215235710144043,
+				-1,
+				-0.7877209186553955
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":9,
+			"componentType":5126,
+			"count":24,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":10,
+			"componentType":5126,
+			"count":24,
+			"type":"VEC2"
 		}
 	],
 	"bufferViews":[
@@ -115,11 +262,53 @@
 			"byteLength":312,
 			"byteOffset":2688,
 			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":288,
+			"byteOffset":3000,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":288,
+			"byteOffset":3288,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":192,
+			"byteOffset":3576,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":72,
+			"byteOffset":3768,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":288,
+			"byteOffset":3840,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":288,
+			"byteOffset":4128,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":192,
+			"byteOffset":4416,
+			"target":34962
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":3000,
+			"byteLength":4608,
 			"uri":"greybox.bin"
 		}
 	]
