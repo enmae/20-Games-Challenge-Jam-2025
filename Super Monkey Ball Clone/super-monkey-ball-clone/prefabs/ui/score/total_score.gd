@@ -5,7 +5,8 @@ extends CanvasLayer
 
 func _ready() -> void:
     totalScore.text = str(score)
+    GameEvents.update_total_score.connect(on_update_score)
 
-func update_score(points: int):
+func on_update_score(points: int):
     score += points
     totalScore.text = str(score)

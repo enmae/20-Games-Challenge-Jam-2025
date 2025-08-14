@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dg2tjeo0eo4rf"]
+[gd_scene load_steps=7 format=3 uid="uid://dg2tjeo0eo4rf"]
 
 [ext_resource type="Script" uid="uid://dpj4nn1jgcbra" path="res://prefabs/collectables/fish/fish.gd" id="1_xlurk"]
+[ext_resource type="PackedScene" uid="uid://bhhtuwihhbr1t" path="res://prefabs/ui/score/total_score.tscn" id="2_73nod"]
+[ext_resource type="PackedScene" uid="uid://bafghw5sjkie1" path="res://prefabs/ui/fish_count/fish_count.tscn" id="3_4b3wd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_elena"]
 
@@ -11,6 +13,8 @@
 [node name="Fish" type="StaticBody3D"]
 physics_material_override = SubResource("PhysicsMaterial_elena")
 script = ExtResource("1_xlurk")
+total_score = ExtResource("2_73nod")
+fish_count = ExtResource("3_4b3wd")
 
 [node name="CollisionBody3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0, 0, 0, 0.5, 0, 0, 0)

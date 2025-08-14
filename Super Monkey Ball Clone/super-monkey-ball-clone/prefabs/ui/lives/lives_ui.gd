@@ -5,12 +5,16 @@ extends CanvasLayer
 
 var lives = 0
 
-func add_life():
+func _ready() -> void:
+	GameEvents.life_added.connect(on_life_added)
+	GameEvents.life_removed.connect(on_life_removed)
+
+func on_life_added():
 	var life_image_scene = life_image.instantiate()
 	life_container.add_child(life_image_scene)
 	lives += 1
 
-func remove_life():
+func on_life_removed():
 	lives -= 1
 	
 	var child = life_container.get_child(0)
