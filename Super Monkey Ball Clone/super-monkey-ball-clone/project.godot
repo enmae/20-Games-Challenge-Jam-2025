@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 TotalScore="*res://prefabs/ui/score/total_score.tscn"
+FishCount="*res://prefabs/ui/fish_count/fish_count.tscn"
+LivesUI="*res://prefabs/ui/lives/lives_ui.tscn"
 
 [editor_plugins]
 
@@ -35,6 +37,10 @@ folder_colors={
 [global_group]
 
 character=""
+
+[gui]
+
+theme/custom="uid://bmelh2oq6r4tx"
 
 [input]
 

@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://bafghw5sjkie1"]
+
+[ext_resource type="Script" uid="uid://c0eq1tbe2yg3c" path="res://prefabs/ui/fish_count/fish_count.gd" id="1_ph3eq"]
+[ext_resource type="Theme" uid="uid://bmelh2oq6r4tx" path="res://assets/themes/theme.tres" id="1_t5jqd"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ph3eq"]
+size = Vector2(32, 32)
+
+[node name="FishCount" type="CanvasLayer"]
+script = ExtResource("1_ph3eq")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -225.0
+offset_bottom = 82.0
+grow_horizontal = 0
+theme = ExtResource("1_t5jqd")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_ph3eq")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Fish Header" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_t5jqd")
+theme_override_font_sizes/font_size = 32
+text = "FISH"
+
+[node name="CollectedFishCount" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_t5jqd")
+theme_override_font_sizes/font_size = 32
+text = "0 / 100"

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi32ubar2jaq6"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_63dm3"]
+size = Vector2(32, 32)
+
+[node name="LifeImage" type="TextureRect"]
+texture = SubResource("PlaceholderTexture2D_63dm3")
+stretch_mode = 4
