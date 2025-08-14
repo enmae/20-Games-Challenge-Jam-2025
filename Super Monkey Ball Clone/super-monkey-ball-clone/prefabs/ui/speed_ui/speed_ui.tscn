@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://clhfolea1jg30"]
+
+[ext_resource type="Script" uid="uid://bbtlufexutl1q" path="res://prefabs/ui/speed_ui/speed_ui.gd" id="1_i7ec3"]
+
+[node name="SpeedUI" type="CanvasLayer"]
+script = ExtResource("1_i7ec3")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 46.0
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="Speed Value" type="Label" parent="PanelContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0 MPH"
