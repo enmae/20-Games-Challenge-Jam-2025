@@ -11,4 +11,7 @@ script = ExtResource("1_xlurk")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_36g2a")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_36g2a")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
