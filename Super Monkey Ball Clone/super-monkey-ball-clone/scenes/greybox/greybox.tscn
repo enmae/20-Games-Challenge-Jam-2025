@@ -32,307 +32,309 @@ shadow_enabled = true
 [node name="Character" parent="." instance=ExtResource("2_mi44d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.06789, -3.13972, -14.419)
 
-[node name="Fish" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fishies" type="Node3D" parent="."]
+
+[node name="Fish" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish101" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish101" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -40.3739)
 
-[node name="Fish9" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish9" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish10" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish10" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish11" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish11" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish12" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish12" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish13" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish13" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish14" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish14" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish15" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish15" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish16" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish16" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish17" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish17" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish18" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish18" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish19" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish19" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish20" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish20" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish21" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish21" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish22" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish22" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish23" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish23" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish24" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish24" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish25" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish25" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish26" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish26" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish27" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish27" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish28" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish28" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish29" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish29" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish30" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish30" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish31" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish31" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish32" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish32" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish33" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish33" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish34" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish34" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish35" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish35" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish36" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish36" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish37" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish37" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish38" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish38" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish39" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish39" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish40" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish40" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish41" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish41" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish42" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish42" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish43" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish43" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish44" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish44" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish45" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish45" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish46" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish46" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish47" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish47" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish48" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish48" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish49" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish49" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish50" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish50" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish51" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish51" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish52" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish52" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish53" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish53" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish54" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish54" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish55" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish55" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish56" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish56" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish57" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish57" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish58" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish58" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish59" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish59" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish60" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish60" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish61" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish61" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish62" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish62" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish63" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish63" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish64" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish64" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish65" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish65" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish66" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish66" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish67" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish67" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish68" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish68" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish69" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish69" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish70" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish70" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish71" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish71" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish72" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish72" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish73" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish73" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish74" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish74" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish75" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish75" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish76" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish76" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish77" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish77" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish78" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish78" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish79" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish79" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish80" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish80" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish81" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish81" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish82" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish82" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish83" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish83" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish84" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish84" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish85" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish85" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish86" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish86" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish87" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish87" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish88" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish88" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish89" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish89" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish90" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish90" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish91" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish91" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish92" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish92" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish93" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish93" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish94" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish94" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish95" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish95" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish96" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish96" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish97" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish97" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish98" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish98" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish99" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish99" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish100" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish100" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19.0409, -33.8346)
 
-[node name="Fish2" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish2" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish3" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish3" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish4" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish4" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish5" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish5" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish6" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish6" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish7" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish7" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
-[node name="Fish8" parent="." instance=ExtResource("4_rss2v")]
+[node name="Fish8" parent="Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -19, -34)
 
 [node name="DeathZone" parent="." instance=ExtResource("4_7uk4v")]
