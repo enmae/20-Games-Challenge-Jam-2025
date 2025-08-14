@@ -1,29 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dg2tjeo0eo4rf"]
+[gd_scene load_steps=3 format=3 uid="uid://dg2tjeo0eo4rf"]
 
 [ext_resource type="Script" uid="uid://dpj4nn1jgcbra" path="res://prefabs/collectables/fish/fish.gd" id="1_xlurk"]
-[ext_resource type="PackedScene" uid="uid://bhhtuwihhbr1t" path="res://prefabs/ui/score/total_score.tscn" id="2_73nod"]
-[ext_resource type="PackedScene" uid="uid://bafghw5sjkie1" path="res://prefabs/ui/fish_count/fish_count.tscn" id="3_4b3wd"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_elena"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xlurk"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_36g2a"]
 
-[node name="Fish" type="StaticBody3D"]
-physics_material_override = SubResource("PhysicsMaterial_elena")
+[node name="Fish" type="Area3D"]
 script = ExtResource("1_xlurk")
-total_score = ExtResource("2_73nod")
-fish_count = ExtResource("3_4b3wd")
 
-[node name="CollisionBody3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0, 0, 0, 0.5, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_xlurk")
-disabled = true
-
-[node name="Area3D" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_36g2a")
-
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

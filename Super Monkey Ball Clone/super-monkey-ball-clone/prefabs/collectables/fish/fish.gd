@@ -1,4 +1,4 @@
-extends StaticBody3D
+extends Area3D
 
 const SCORE = 100.0
 
