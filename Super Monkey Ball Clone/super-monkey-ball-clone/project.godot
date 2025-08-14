@@ -15,6 +15,10 @@ run/main_scene="uid://csmb7pxt2h2i1"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+TotalScore="*res://prefabs/ui/score/total_score.tscn"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/anthonyec.camera_preview/plugin.cfg")
@@ -23,9 +27,14 @@ enabled=PackedStringArray("res://addons/anthonyec.camera_preview/plugin.cfg")
 
 folder_colors={
 "res://assets/": "red",
+"res://downloads/": "purple",
 "res://prefabs/": "green",
 "res://scenes/": "yellow"
 }
+
+[global_group]
+
+character=""
 
 [input]
 

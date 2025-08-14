@@ -9,7 +9,7 @@ friction = 0.1
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_tgg11"]
 
-[node name="Character" type="RigidBody3D"]
+[node name="Character" type="RigidBody3D" groups=["character"]]
 physics_material_override = SubResource("PhysicsMaterial_tgg11")
 lock_rotation = true
 script = ExtResource("1_up5c1")
