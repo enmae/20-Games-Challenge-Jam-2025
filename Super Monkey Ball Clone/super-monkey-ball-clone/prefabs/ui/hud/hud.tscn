@@ -11,16 +11,12 @@ script = ExtResource("1_dsf3i")
 
 [node name="FishCount" parent="." instance=ExtResource("3_f7va4")]
 unique_name_in_owner = true
-visible = false
 
 [node name="LivesUI" parent="." instance=ExtResource("2_3f6uq")]
 unique_name_in_owner = true
-visible = false
 
 [node name="TotalScore" parent="." instance=ExtResource("4_16ybw")]
 unique_name_in_owner = true
-visible = false
 
 [node name="SpeedUI" parent="." instance=ExtResource("5_3f6uq")]
 unique_name_in_owner = true
-visible = false
