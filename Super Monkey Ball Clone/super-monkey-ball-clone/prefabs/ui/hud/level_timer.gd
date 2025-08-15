@@ -7,7 +7,7 @@ extends CanvasLayer
 
 func _ready() -> void:
 	timer.wait_time = level_time
-	timer.start()
+	#timer.start()
 
 	timer.timeout.connect(on_timer_timeout)
 

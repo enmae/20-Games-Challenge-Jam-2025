@@ -1,16 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://bfywu8if32nt2"]
+[gd_scene load_steps=6 format=3 uid="uid://bfywu8if32nt2"]
 
 [ext_resource type="Script" uid="uid://dvckkaj4srg8p" path="res://prefabs/character/character.gd" id="1_up5c1"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tgg11"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_up5c1"]
 friction = 0.1
+bounce = 1.0
+absorbent = true
 
 [sub_resource type="SphereMesh" id="SphereMesh_tgg11"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_tgg11"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_up5c1"]
+
 [node name="Character" type="RigidBody3D" groups=["player"]]
-physics_material_override = SubResource("PhysicsMaterial_tgg11")
+physics_material_override = SubResource("PhysicsMaterial_up5c1")
+gravity_scale = 2.5
 lock_rotation = true
 script = ExtResource("1_up5c1")
 
@@ -19,10 +24,19 @@ mesh = SubResource("SphereMesh_tgg11")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_tgg11")
+debug_color = Color(0, 0.6, 0.7, 0.42)
 
 [node name="CameraPivot" type="Node3D" parent="."]
 unique_name_in_owner = true
 
-[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+[node name="CamOffset" type="Node3D" parent="CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 2.01)
+
+[node name="CamSpringArm" type="SpringArm3D" parent="CameraPivot/CamOffset"]
+shape = SubResource("SphereShape3D_up5c1")
+spring_length = 1.8
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/CamOffset/CamSpringArm"]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 1.65655, 3.44961)
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0.184557, 0.44554)
+current = true
