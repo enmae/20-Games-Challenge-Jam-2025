@@ -1,11 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://ho4tev8jrorm"]
 
-[ext_resource type="Script" uid="uid://jbjo613uuml4" path="res://prefabs/ui/settings/settings_menu.gd" id="1_gefop"]
+[ext_resource type="Script" uid="uid://jbjo613uuml4" path="res://prefabs/ui/menus/settings_menu.gd" id="1_gefop"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gefop"]
 bg_color = Color(0.18359, 0.18359, 0.18359, 1)
 
 [node name="SettingsMenu" type="CanvasLayer"]
+process_mode = 3
+layer = 3
 script = ExtResource("1_gefop")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
@@ -40,6 +42,7 @@ alignment = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "Settings"
+horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -101,4 +104,4 @@ custom_minimum_size = Vector2(240, 48)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 24
-text = "Main Menu"
+text = "Back"

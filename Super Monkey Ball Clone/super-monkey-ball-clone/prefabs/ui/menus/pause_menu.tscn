@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbf2qguvxt2f7"]
+
+[ext_resource type="Script" uid="uid://ct5to0csp6nn4" path="res://prefabs/ui/menus/pause_menu.gd" id="1_dr0be"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2f47r"]
+bg_color = Color(0.18359, 0.18359, 0.18359, 1)
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_dr0be")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -359.0
+offset_top = -233.0
+offset_right = 361.0
+offset_bottom = 247.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2f47r")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+custom_minimum_size = Vector2(460, 460)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ResumeButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+process_mode = 3
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+text = "Resume"
+
+[node name="SettingsButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+process_mode = 3
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+text = "Settings"
+
+[node name="MainMenuButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+process_mode = 3
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+text = "Main Menu"

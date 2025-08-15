@@ -9,9 +9,14 @@ signal back_pressed
 
 func _ready():
 	back_button.pressed.connect(on_back_button_pressed)
-	master_slider.value_changed.connect(on_audio_slider_changed.bind("master"))
-	sfx_slider.value_changed.connect(on_audio_slider_changed.bind("sfx"))
-	music_slider.value_changed.connect(on_audio_slider_changed.bind("music"))
+	master_slider.value_changed.connect(on_audio_slider_changed.bind("Master"))
+	sfx_slider.value_changed.connect(on_audio_slider_changed.bind("SFX"))
+	music_slider.value_changed.connect(on_audio_slider_changed.bind("Music"))
+
+func get_bus_volume_percent(bus_name: String):
+	var bus_index = AudioServer.get_bus_index(bus_name)
+	var volume_db = AudioServer.get_bus_volume_db(bus_index)
+	return db_to_linear(volume_db)
 
 func set_bus_volume_percent(bus_name: String, percent: float):
 	var bus_index = AudioServer.get_bus_index(bus_name)
