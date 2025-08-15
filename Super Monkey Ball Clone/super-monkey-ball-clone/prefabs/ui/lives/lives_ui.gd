@@ -20,7 +20,7 @@ func on_life_removed():
 	var child = life_container.get_child(0)
 	life_container.remove_child(child)
 	child.queue_free()
-
+	
 	if (lives < 0):
 		## TODO: go to game over screen then main menu
 		print("Game over!")
