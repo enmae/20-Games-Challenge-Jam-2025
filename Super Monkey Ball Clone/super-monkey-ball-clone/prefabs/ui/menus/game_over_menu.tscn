@@ -34,7 +34,8 @@ theme_override_font_sizes/font_size = 84
 text = "Continue?"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer2"]
+[node name="ContinuesLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "You have X continues remaining"
 horizontal_alignment = 1
