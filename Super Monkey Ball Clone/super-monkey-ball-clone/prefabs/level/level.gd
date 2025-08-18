@@ -5,6 +5,11 @@ extends Node3D
 @export var level_parent: Node3D
 
 var angle := 15.0
+var spawn_position := Vector3.ZERO
+
+func _ready() -> void:
+	spawn_position = character.global_position
+	GameEvents.reset_player_position.connect(on_reset_player_position)
 
 func _process(_delta: float) -> void:
 	var _rotate_x := 0.0
@@ -36,3 +41,6 @@ func _process(_delta: float) -> void:
 	level_parent.rotation_degrees.z = lerpf(level_parent.rotation_degrees.z, target_z, 0.1)
 	
 	level_parent.position = character.global_position
+
+func on_reset_player_position():
+	character.global_position = spawn_position

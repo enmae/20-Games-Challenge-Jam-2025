@@ -15,14 +15,15 @@ func on_life_added():
 	lives += 1
 
 func on_life_removed():
-	if (lives < 0):
-		var current_scene_path = get_tree().get_current_scene().get_path()
-		GameEvents.emit_game_over(current_scene_path)
-		get_tree().change_scene_to_file("res://scenes/game_over_screen/game_over_screen.tscn")
-		return
-
 	lives -= 1
-	
-	var child = life_container.get_child(0)
-	life_container.remove_child(child)
-	child.queue_free()
+
+	if (lives < 0):
+		var current_scene = get_tree().get_current_scene()
+		print(current_scene)
+		GameEvents.emit_game_over(current_scene)
+		get_tree().change_scene_to_file("res://scenes/game_over_screen/game_over_screen.tscn")
+	elif (lives > 0):
+		var child = life_container.get_child(0)
+		life_container.remove_child(child)
+		child.queue_free()
+		GameEvents.emit_reset_player_position()
