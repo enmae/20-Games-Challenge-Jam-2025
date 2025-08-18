@@ -26,4 +26,3 @@ func on_life_removed():
 		var child = life_container.get_child(0)
 		life_container.remove_child(child)
 		child.queue_free()
-		GameEvents.emit_reset_player_position()
