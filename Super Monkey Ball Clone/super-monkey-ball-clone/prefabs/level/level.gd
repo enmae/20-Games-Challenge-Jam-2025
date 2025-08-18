@@ -10,6 +10,7 @@ var spawn_position := Vector3.ZERO
 func _ready() -> void:
 	spawn_position = character.global_position
 	GameEvents.reset_player_position.connect(on_reset_player_position)
+	GameEvents.last_played_level = get_tree().current_scene.scene_file_path
 
 func _process(_delta: float) -> void:
 	var _rotate_x := 0.0

@@ -7,6 +7,8 @@ signal update_total_score(new_score: int)
 signal update_fish_count(fish_count: int)
 signal game_over(continue_level: Node)
 
+var last_played_level := ""
+
 func emit_life_added():
 	life_added.emit()
 
