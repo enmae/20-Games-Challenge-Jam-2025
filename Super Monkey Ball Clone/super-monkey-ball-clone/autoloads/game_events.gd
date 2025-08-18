@@ -4,6 +4,7 @@ signal life_added()
 signal life_removed()
 signal update_total_score(new_score: int)
 signal update_fish_count(fish_count: int)
+signal game_over(continue_level_path: String)
 
 func emit_life_added():
 	life_added.emit()
@@ -16,3 +17,6 @@ func emit_update_total_score(new_score: int):
 
 func emit_update_fish_count(fish_count: int):
 	update_fish_count.emit(fish_count)
+
+func emit_game_over(continue_level_path: String):
+	game_over.emit(continue_level_path)

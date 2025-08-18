@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgqm566r8dubp"]
+
+[ext_resource type="PackedScene" uid="uid://dfmisarp3pgdx" path="res://prefabs/ui/menus/game_over_menu.tscn" id="1_l2cnm"]
+
+[sub_resource type="Environment" id="Environment_prved"]
+
+[node name="GameOverScreen" type="Node3D"]
+
+[node name="GameOverMenu" parent="." instance=ExtResource("1_l2cnm")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_prved")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
