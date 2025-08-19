@@ -1,0 +1,57 @@
+[gd_scene load_steps=11 format=3 uid="uid://yc53wjagpg14"]
+
+[ext_resource type="Script" uid="uid://bpoww2s6ab3ny" path="res://prefabs/level/level.gd" id="1_6wbta"]
+[ext_resource type="PackedScene" uid="uid://bfywu8if32nt2" path="res://prefabs/character/character.tscn" id="2_jcx31"]
+[ext_resource type="PackedScene" uid="uid://c8fgapv0b0xay" path="res://prefabs/death_zone/death_zone.tscn" id="3_w6vg7"]
+[ext_resource type="PackedScene" uid="uid://ynxhpflixwav" path="res://prefabs/ui/hud/hud.tscn" id="4_dn6ky"]
+[ext_resource type="PackedScene" uid="uid://j27r247mmmv8" path="res://prefabs/ui/hud/level_timer.tscn" id="5_62c7k"]
+[ext_resource type="PackedScene" uid="uid://b4dd2cmvrohxf" path="res://assets/models/greybox/LV_3_Greybox.gltf" id="6_82frd"]
+[ext_resource type="Script" uid="uid://dner0h0fgbljh" path="res://addons/free_look_cam/free_look_camera.gd" id="8_bh22m"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_62ugy"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_cb6wy"]
+sky_material = SubResource("ProceduralSkyMaterial_62ugy")
+
+[sub_resource type="Environment" id="Environment_k5vq6"]
+background_mode = 2
+sky = SubResource("Sky_cb6wy")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Greybox" type="Node3D" node_paths=PackedStringArray("character", "level_node", "level_parent")]
+script = ExtResource("1_6wbta")
+character = NodePath("Character")
+level_node = NodePath("LevelParent/LV_3_Greybox")
+level_parent = NodePath("LevelParent")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_k5vq6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Character" parent="." instance=ExtResource("2_jcx31")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.225241, 2.45173, 15.2504)
+script = null
+
+[node name="DeathZone" parent="." instance=ExtResource("3_w6vg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5253, -43.1151, -5.52898)
+
+[node name="HUD" parent="." instance=ExtResource("4_dn6ky")]
+
+[node name="LevelTimer" parent="." instance=ExtResource("5_62c7k")]
+
+[node name="LevelParent" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="LV_3_Greybox" parent="LevelParent" instance=ExtResource("6_82frd")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+script = ExtResource("8_bh22m")
+
+[editable path="DeathZone"]
