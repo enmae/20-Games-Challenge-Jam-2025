@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://ot252a6fioub"]
+
+[ext_resource type="Script" uid="uid://7vcvp5r7s7k8" path="res://prefabs/level/start_area/start_area.gd" id="1_56hru"]
+
+[sub_resource type="Animation" id="Animation_56hru"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextGroup:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_887uk"]
+resource_name = "default"
+length = 0.7
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextGroup:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.35, 0.7),
+"transitions": PackedFloat32Array(0.637281, 1.62451, 2.14355, 1.46409),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.65, 0), Vector3(0, 0.045, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a1t38"]
+_data = {
+&"RESET": SubResource("Animation_56hru"),
+&"default": SubResource("Animation_887uk")
+}
+
+[node name="StartArea" type="Marker3D"]
+script = ExtResource("1_56hru")
+
+[node name="TextGroup" type="Node3D" parent="."]
+
+[node name="Label3D" type="Label3D" parent="TextGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+text = "START"
+font_size = 64
+
+[node name="Label3D2" type="Label3D" parent="TextGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.270486, 0)
+text = "↓"
+font_size = 64
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_a1t38")
+}
+autoplay = "default"
