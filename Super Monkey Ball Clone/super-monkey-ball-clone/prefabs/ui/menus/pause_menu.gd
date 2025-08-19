@@ -27,6 +27,7 @@ func on_settings_button_pressed():
 	settings_instance.back_pressed.connect(on_settings_closed.bind(settings_instance))
 
 func on_main_menu_button_pressed():
+	GameEvents.continues = GameEvents.MAX_CONTINUES
 	close()
 	get_tree().change_scene_to_file("res://scenes/title_screen/title_screen.tscn")
 
