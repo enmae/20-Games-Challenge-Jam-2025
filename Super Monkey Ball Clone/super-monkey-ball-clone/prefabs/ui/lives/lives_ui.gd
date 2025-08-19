@@ -16,12 +16,10 @@ func on_life_added():
 
 func on_life_removed():
 	lives -= 1
-	
-	var child = life_container.get_child(0)
-	life_container.remove_child(child)
-	child.queue_free()
-	
+
 	if (lives < 0):
-		## TODO: go to game over screen then main menu
-		print("Game over!")
-		get_tree().change_scene_to_file("res://scenes/title_screen/title_screen.tscn")
+		get_tree().change_scene_to_file("res://scenes/game_over_screen/game_over_screen.tscn")
+	elif (lives > 0):
+		var child = life_container.get_child(0)
+		life_container.remove_child(child)
+		child.queue_free()

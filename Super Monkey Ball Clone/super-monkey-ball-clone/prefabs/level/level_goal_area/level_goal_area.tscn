@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbiqt10urxte5"]
+
+[ext_resource type="Script" uid="uid://dh6qy8nxw5vol" path="res://prefabs/level/level_goal_area/level_goal_area.gd" id="1_o6u2a"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_p7kqm"]
+radius = 2.1
+
+[node name="LevelGoalArea" type="Area3D"]
+script = ExtResource("1_o6u2a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_p7kqm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

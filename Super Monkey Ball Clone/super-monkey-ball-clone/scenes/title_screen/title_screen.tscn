@@ -20,35 +20,66 @@ glow_enabled = true
 [node name="TitleScreen" type="Node3D"]
 script = ExtResource("1_5df70")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="MainMenu" type="CanvasLayer" parent="."]
 
-[node name="TopNode" type="Control" parent="CanvasLayer"]
+[node name="TopNode" type="Control" parent="MainMenu"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 20.0
+grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/TopNode"]
-layout_mode = 0
-offset_left = 44.0
-offset_top = 145.0
-offset_right = 292.0
-offset_bottom = 377.0
+[node name="PanelContainer" type="PanelContainer" parent="MainMenu/TopNode"]
+custom_minimum_size = Vector2(400, 240)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -120.0
+offset_right = 400.0
+offset_bottom = 120.0
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MainMenu/TopNode/PanelContainer"]
+layout_mode = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="CanvasLayer/TopNode/ColorRect"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="MarginContainer" type="MarginContainer" parent="MainMenu/TopNode/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MainMenu/TopNode/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 36
+
+[node name="Label" type="Label" parent="MainMenu/TopNode/PanelContainer/MarginContainer/VBoxContainer2"]
+layout_mode = 2
 text = "TITLE SCREEN"
 
-[node name="StartButton" type="Button" parent="CanvasLayer/TopNode/ColorRect"]
-layout_mode = 0
-offset_left = 57.0
-offset_top = 112.0
-offset_right = 190.0
-offset_bottom = 170.0
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/TopNode/PanelContainer/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="StartButton" type="Button" parent="MainMenu/TopNode/PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
 text = "START DA GAME"
+
+[node name="SettingButton" type="Button" parent="MainMenu/TopNode/PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="MainMenu/TopNode/PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quit Game
+"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_vuv2h")
@@ -64,4 +95,4 @@ mesh = SubResource("CapsuleMesh_ri6bm")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.895728, -0.131086, 0.424838, 0, 0.955547, 0.294839, -0.444602, -0.264096, 0.85591, 2.20687, 2.81913, 4.82448)
 
-[connection signal="pressed" from="CanvasLayer/TopNode/ColorRect/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MainMenu/TopNode/PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

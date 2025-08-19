@@ -26,17 +26,14 @@ mesh = SubResource("SphereMesh_tgg11")
 shape = SubResource("SphereShape3D_tgg11")
 debug_color = Color(0, 0.6, 0.7, 0.42)
 
-[node name="CameraPivot" type="Node3D" parent="."]
-unique_name_in_owner = true
+[node name="CamOffset" type="Node3D" parent="."]
 
-[node name="CamOffset" type="Node3D" parent="CameraPivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 2.01)
-
-[node name="CamSpringArm" type="SpringArm3D" parent="CameraPivot/CamOffset"]
+[node name="CamSpringArm" type="SpringArm3D" parent="CamOffset"]
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0.855, 0)
 shape = SubResource("SphereShape3D_up5c1")
-spring_length = 1.8
+spring_length = 3.5
 
-[node name="Camera3D" type="Camera3D" parent="CameraPivot/CamOffset/CamSpringArm"]
+[node name="Camera3D" type="Camera3D" parent="CamOffset/CamSpringArm"]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0.184557, 0.44554)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 current = true
