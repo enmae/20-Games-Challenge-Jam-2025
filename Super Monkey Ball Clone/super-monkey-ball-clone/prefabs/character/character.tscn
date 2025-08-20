@@ -15,7 +15,7 @@ absorbent = true
 
 [node name="Character" type="RigidBody3D" groups=["player"]]
 physics_material_override = SubResource("PhysicsMaterial_up5c1")
-gravity_scale = 2.5
+gravity_scale = 3.0
 lock_rotation = true
 script = ExtResource("1_up5c1")
 
@@ -35,5 +35,4 @@ spring_length = 3.5
 
 [node name="Camera3D" type="Camera3D" parent="CamOffset/CamSpringArm"]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 current = true
