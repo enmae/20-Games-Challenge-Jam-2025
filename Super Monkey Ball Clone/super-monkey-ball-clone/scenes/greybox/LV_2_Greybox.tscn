@@ -24,7 +24,7 @@ glow_enabled = true
 [node name="Greybox" type="Node3D" node_paths=PackedStringArray("character", "level_node", "level_parent")]
 script = ExtResource("1_2gdjr")
 character = NodePath("Character")
-level_node = NodePath("LV_2_Greybox")
+level_node = NodePath("LevelParent/LV_2_Greybox")
 level_parent = NodePath("LevelParent")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -36,7 +36,7 @@ shadow_enabled = true
 
 [node name="Character" parent="." instance=ExtResource("2_kpsem")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.225241, 2.45173, 15.2504)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.2602, 4.80655, -1.18612)
 script = null
 
 [node name="DeathZone" parent="." instance=ExtResource("3_jdto8")]
@@ -49,10 +49,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5253, -43.1151, -5.52898)
 [node name="LevelParent" type="Node3D" parent="."]
 unique_name_in_owner = true
 
+[node name="LV_2_Greybox" parent="LevelParent" instance=ExtResource("7_4t8yj")]
+
 [node name="Camera3D" type="Camera3D" parent="."]
 script = ExtResource("8_35vv1")
-
-[node name="LV_2_Greybox" parent="." instance=ExtResource("7_4t8yj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.85589, -0.0731163, -12.9899)
 
 [editable path="DeathZone"]

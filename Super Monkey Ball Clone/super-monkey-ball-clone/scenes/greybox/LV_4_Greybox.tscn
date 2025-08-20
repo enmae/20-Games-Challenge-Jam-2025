@@ -36,7 +36,7 @@ shadow_enabled = true
 
 [node name="Character" parent="." instance=ExtResource("2_lpbwp")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.225241, 2.45173, 15.2504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2908, 26.1144, 14.0704)
 script = null
 
 [node name="DeathZone" parent="." instance=ExtResource("3_5u585")]
