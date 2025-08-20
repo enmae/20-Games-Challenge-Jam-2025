@@ -366,23 +366,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -17.9658, -34)
 [node name="Fish8" parent="LevelParent/greybox/Fishies" instance=ExtResource("4_rss2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -17.9658, -34)
 
-[node name="LevelGoalArea" parent="." instance=ExtResource("8_52x7t")]
+[node name="Warps" parent="LevelParent/greybox" instance=ExtResource("11_1y34u")]
+
+[node name="FirstWarp" parent="LevelParent/greybox/Warps" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46398, -17.9175, -45.374)
+
+[node name="SecondWarp" parent="LevelParent/greybox/Warps" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0435, -33.8559, 55.5961)
+
+[node name="LevelGoalArea" parent="LevelParent/greybox" instance=ExtResource("8_52x7t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0781, -34.525, 69.8084)
+
+[node name="StartArea" parent="LevelParent/greybox" instance=ExtResource("10_dqif8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.21165, 1.99815)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 script = ExtResource("8_tio7h")
 
-[node name="StartArea" parent="." instance=ExtResource("10_dqif8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.21165, 1.99815)
-
-[node name="Warps" parent="." instance=ExtResource("11_1y34u")]
-
-[node name="FirstWarp" parent="Warps" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46398, -17.9175, -45.374)
-
-[node name="SecondWarp" parent="Warps" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0435, -33.8559, 55.5961)
-
 [editable path="DeathZone"]
 [editable path="LevelParent/greybox"]
-[editable path="Warps"]
+[editable path="LevelParent/greybox/Warps"]
