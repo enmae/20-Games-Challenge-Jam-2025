@@ -45,3 +45,4 @@ func _process(_delta: float) -> void:
 
 func on_reset_player_position():
 	character.global_position = spawn_position
+	character.linear_velocity = Vector3.ZERO

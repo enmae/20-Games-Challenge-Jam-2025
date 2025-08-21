@@ -384,5 +384,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.21165, 1.99815)
 script = ExtResource("8_tio7h")
 
 [editable path="DeathZone"]
+[editable path="HUD/LevelTimer"]
 [editable path="LevelParent/greybox"]
 [editable path="LevelParent/greybox/Warps"]
