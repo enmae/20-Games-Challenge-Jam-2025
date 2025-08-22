@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-var rotate_rate := 120.0
+var rotate_rate := 100.0
 
 var pause_menu_scene = preload("res://prefabs/ui/menus/pause_menu.tscn")
 

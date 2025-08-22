@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ce8benh228p2e"
-valid=false
+path="res://.godot/imported/SM_Cardboard_Closed.gltf-3d39bb6d8a17179daa29379ba8fd9ede.scn"
 
 [deps]
 
 source_file="res://assets/models/greybox/Moving_Platform/SM_Cardboard_Closed.gltf"
+dest_files=["res://.godot/imported/SM_Cardboard_Closed.gltf-3d39bb6d8a17179daa29379ba8fd9ede.scn"]
 
 [params]
 
