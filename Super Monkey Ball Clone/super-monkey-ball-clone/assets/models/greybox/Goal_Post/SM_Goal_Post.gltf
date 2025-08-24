@@ -15,17 +15,12 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"SM_Goal_Base",
+			"name":"SM_Goal_Base.001",
 			"rotation":[
 				0.5,
 				-0.5,
 				-0.5,
 				0.5000000596046448
-			],
-			"translation":[
-				0,
-				2.5,
-				0
 			]
 		}
 	],
@@ -65,7 +60,7 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":968,
+			"count":818,
 			"max":[
 				2.546874523162842,
 				3.655618906021118,
@@ -81,51 +76,51 @@
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":968,
+			"count":818,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":968,
+			"count":818,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":2472,
+			"count":2280,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":11616,
+			"byteLength":9816,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":11616,
-			"byteOffset":11616,
+			"byteLength":9816,
+			"byteOffset":9816,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":7744,
-			"byteOffset":23232,
+			"byteLength":6544,
+			"byteOffset":19632,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":4944,
-			"byteOffset":30976,
+			"byteLength":4560,
+			"byteOffset":26176,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":35920,
+			"byteLength":30736,
 			"uri":"SM_Goal_Post.bin"
 		}
 	]
