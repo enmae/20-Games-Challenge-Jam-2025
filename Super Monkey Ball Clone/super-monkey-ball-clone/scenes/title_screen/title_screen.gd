@@ -2,12 +2,16 @@ extends Node3D
 
 var settings_menu = preload("res://prefabs/ui/menus/settings_menu.tscn")
 
+@export var start_level := ""
+
 func _ready() -> void:
 	$%SettingButton.pressed.connect(on_settings_pressed)
 	$%QuitButton.pressed.connect(on_quit_pressed)
+	
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _on_start_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/greybox/greybox.tscn")
+	get_tree().change_scene_to_file(start_level)
 
 func on_settings_pressed():
 	var settings_instance = settings_menu.instantiate()

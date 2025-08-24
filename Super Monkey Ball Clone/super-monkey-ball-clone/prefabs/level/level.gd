@@ -14,8 +14,10 @@ func _ready() -> void:
 	GameEvents.reset_player_position.connect(on_reset_player_position)
 	GameEvents.last_played_level = get_tree().current_scene.scene_file_path
 	
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
 	for c in level_node.get_children():
-		if "AM_Moving_Platform" in c.name:
+		if "Moving_Platform" in c.name:
 			rotaters.push_back(c)
 
 func _process(delta: float) -> void:

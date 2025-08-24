@@ -6,6 +6,8 @@ func _ready() -> void:
 	$%YesButton.pressed.connect(on_yes_button_pressed)
 	$%NoButton.pressed.connect(on_no_button_pressed)
 	$%ContinuesLabel.text = "You have " + str(GameEvents.continues) + " continues remaining"
+	
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func reset():
 	GameEvents.continues = GameEvents.MAX_CONTINUES
