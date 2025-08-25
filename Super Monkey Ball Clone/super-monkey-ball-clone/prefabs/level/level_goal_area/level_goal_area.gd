@@ -9,6 +9,6 @@ func _on_body_entered(body: Node3D) -> void:
 		body.linear_velocity = Vector3.ZERO
 		GameEvents.emit_level_completed()
 
-		var hud = get_tree().get_root().get_child(1).get_node("%HUD")
+		var hud = get_tree().get_root().get_child(2).get_node("%HUD")
 		var level_complete_ui = level_complete_ui_scene.instantiate()
 		hud.add_child(level_complete_ui)
