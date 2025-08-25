@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://8pqkfrn85ol1"]
 
-[ext_resource type="Script" path="res://prefabs/ui/score/level_complete_ui.gd" id="1_sfaty"]
+[ext_resource type="Script" uid="uid://cyuoc6cwt7prp" path="res://prefabs/ui/score/level_complete_ui.gd" id="1_sfaty"]
 
 [node name="LevelCompleteUI" type="CanvasLayer"]
 script = ExtResource("1_sfaty")
