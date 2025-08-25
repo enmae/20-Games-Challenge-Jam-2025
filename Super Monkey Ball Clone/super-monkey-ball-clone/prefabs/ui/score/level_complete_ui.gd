@@ -40,3 +40,8 @@ func _ready() -> void:
 
 	#TODO: When navigation to the next level is complete, 
 	##     need to set "is_within_half_level_time" to false again
+	$%Timer.timeout.connect(on_timer_timeout)
+
+func on_timer_timeout():
+	LevelManager.emit_signal("next_level")
+	print("timer ended")
