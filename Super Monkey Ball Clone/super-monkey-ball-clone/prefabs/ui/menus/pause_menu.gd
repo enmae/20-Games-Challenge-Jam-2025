@@ -8,6 +8,8 @@ func _ready() -> void:
 	$%ResumeButton.pressed.connect(on_resume_button_pressed)
 	$%SettingsButton.pressed.connect(on_settings_button_pressed)
 	$%MainMenuButton.pressed.connect(on_main_menu_button_pressed)
+	
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _unhandled_input(event: InputEvent) -> void:
 	if (event.is_action_pressed("pause")):
@@ -17,6 +19,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func close():
 	get_tree().paused = false
 	queue_free()
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 
 func reset():
 	GameEvents.continues = GameEvents.MAX_CONTINUES
