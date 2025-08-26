@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cyshis8xm4m5w"]
+[gd_scene load_steps=12 format=3 uid="uid://cyshis8xm4m5w"]
 
 [ext_resource type="Script" uid="uid://bpoww2s6ab3ny" path="res://prefabs/level/level.gd" id="1_okv6d"]
 [ext_resource type="PackedScene" uid="uid://bfywu8if32nt2" path="res://prefabs/character/character.tscn" id="2_lpbwp"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://j27r247mmmv8" path="res://prefabs/ui/hud/level_timer.tscn" id="5_qg0lv"]
 [ext_resource type="PackedScene" uid="uid://bnafch111wg8h" path="res://assets/models/greybox/LV_4_Greybox.gltf" id="6_mxkx1"]
 [ext_resource type="Script" uid="uid://dner0h0fgbljh" path="res://addons/free_look_cam/free_look_camera.gd" id="8_8tn0r"]
+[ext_resource type="PackedScene" uid="uid://b6luol63hcn0u" path="res://prefabs/minimap/minimap.tscn" id="8_okv6d"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_62ugy"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -53,6 +54,8 @@ unique_name_in_owner = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 script = ExtResource("8_8tn0r")
+
+[node name="SubViewportContainer" parent="." instance=ExtResource("8_okv6d")]
 
 [editable path="DeathZone"]
 [editable path="LevelParent/LV_4_Greybox"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dxbnjxgxls04v"]
+[gd_scene load_steps=15 format=3 uid="uid://dxbnjxgxls04v"]
 
 [ext_resource type="Script" uid="uid://bpoww2s6ab3ny" path="res://prefabs/level/level.gd" id="1_afpyl"]
 [ext_resource type="PackedScene" uid="uid://bfywu8if32nt2" path="res://prefabs/character/character.tscn" id="2_efbwn"]
@@ -25,7 +25,7 @@ sky = SubResource("Sky_cb6wy")
 tonemap_mode = 2
 glow_enabled = true
 
-[node name="Greybox" type="Node3D" node_paths=PackedStringArray("character", "level_node", "level_parent")]
+[node name="Greybox2" type="Node3D" node_paths=PackedStringArray("character", "level_node", "level_parent")]
 script = ExtResource("1_afpyl")
 character = NodePath("Character")
 level_node = NodePath("LevelParent/LV_1_Greybox")
