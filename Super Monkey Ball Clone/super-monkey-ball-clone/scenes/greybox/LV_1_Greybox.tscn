@@ -52,7 +52,6 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 
 [node name="LV_1_Greybox" parent="LevelParent" instance=ExtResource("6_afpyl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54511, 0, -0.0732704)
 
 [node name="LevelGoalArea" parent="LevelParent/LV_1_Greybox" instance=ExtResource("7_afpyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.0018, -0.721633, 0.164842)
