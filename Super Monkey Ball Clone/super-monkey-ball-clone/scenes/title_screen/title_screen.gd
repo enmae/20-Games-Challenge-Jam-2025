@@ -3,6 +3,7 @@ extends Node3D
 var settings_menu = preload("res://prefabs/ui/menus/settings_menu.tscn")
 
 @export var start_level := ""
+@onready var animation_player: AnimationPlayer = $cat2/AnimationPlayer
 
 func _ready() -> void:
 	$%SettingButton.pressed.connect(on_settings_pressed)
@@ -10,6 +11,8 @@ func _ready() -> void:
 	$%CreditsButton.pressed.connect(on_credits_pressed)
 	
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	
+	animation_player.play("sitting")
 
 func _on_start_button_pressed() -> void:
 	get_tree().change_scene_to_file(start_level)

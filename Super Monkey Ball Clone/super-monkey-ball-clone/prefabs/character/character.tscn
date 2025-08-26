@@ -1,6 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfywu8if32nt2"]
+[gd_scene load_steps=15 format=3 uid="uid://bfywu8if32nt2"]
 
 [ext_resource type="Script" uid="uid://dvckkaj4srg8p" path="res://prefabs/character/character.gd" id="1_up5c1"]
+[ext_resource type="PackedScene" uid="uid://4ubd8l0480a2" path="res://assets/models/cat/cat.gltf" id="2_g2ii0"]
+[ext_resource type="AudioStream" uid="uid://dcblduapkuj6o" path="res://assets/sound_effects/rolling.mp3" id="2_o6vhl"]
+[ext_resource type="Shader" uid="uid://b3n241bdnvp1j" path="res://shaders/glass.gdshader" id="3_87xpb"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_up5c1"]
 friction = 0.1
@@ -9,20 +12,62 @@ absorbent = true
 
 [sub_resource type="SphereMesh" id="SphereMesh_tgg11"]
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_iitcd"]
+frequency = 0.0192
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vrykm"]
+bump_strength = 2.0
+noise = SubResource("FastNoiseLite_iitcd")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_87xpb"]
+frequency = 0.0484
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_iitcd"]
+as_normal_map = true
+bump_strength = 6.8
+noise = SubResource("FastNoiseLite_87xpb")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iitcd"]
+render_priority = 0
+shader = ExtResource("3_87xpb")
+shader_parameter/albedo = Color(0.43, 0.848, 1, 0.121569)
+shader_parameter/roughness = 0.255
+shader_parameter/roughness_texture = SubResource("NoiseTexture2D_iitcd")
+shader_parameter/normal_strength = 1.0
+shader_parameter/normal_map = SubResource("NoiseTexture2D_vrykm")
+shader_parameter/edge_color = Color(0, 0, 0, 1)
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_tgg11"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_up5c1"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_o6vhl"]
+radius = 1.5
 
 [node name="Character" type="RigidBody3D" groups=["player"]]
 physics_material_override = SubResource("PhysicsMaterial_up5c1")
 gravity_scale = 3.0
 lock_rotation = true
+contact_monitor = true
+max_contacts_reported = 2
 script = ExtResource("1_up5c1")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="cat2" parent="." instance=ExtResource("2_g2ii0")]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, 0, 0)
+
+[node name="cat" parent="cat2/Armature/Skeleton3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.68924e-08, 0, 0.536386)
+
+[node name="AnimationPlayer" parent="cat2" index="1"]
+playback_default_blend_time = 0.3
+
+[node name="Ball" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 0, 0, 0)
 mesh = SubResource("SphereMesh_tgg11")
+surface_material_override/0 = SubResource("ShaderMaterial_iitcd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
 shape = SubResource("SphereShape3D_tgg11")
 debug_color = Color(0, 0.6, 0.7, 0.42)
 
@@ -36,3 +81,18 @@ spring_length = 3.5
 [node name="Camera3D" type="Camera3D" parent="CamOffset/CamSpringArm"]
 unique_name_in_owner = true
 current = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_o6vhl")
+volume_db = 2.0
+autoplay = true
+bus = &"SFX"
+
+[node name="Area3D" type="Area3D" parent="."]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_o6vhl")
+
+[editable path="cat2"]

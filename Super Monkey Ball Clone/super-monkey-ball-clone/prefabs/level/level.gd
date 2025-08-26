@@ -4,7 +4,7 @@ extends Node3D
 @export var level_node: Node3D
 @export var level_parent: Node3D
 
-@onready var mini_map_cam: Camera3D = %MiniMapCam
+@export var mini_map_cam: Camera3D
 
 var angle := 15.0
 var spawn_position := Vector3.ZERO
