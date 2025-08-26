@@ -8,6 +8,11 @@ var count = 0
 
 func _ready() -> void:
 	GameEvents.update_fish_count.connect(on_update_fish_count)
+	count = GameEvents.fish_count
+	update_fish_count_label(GameEvents.fish_count)
+
+func update_fish_count_label(new_count: int):
+	collected_fish_count.text = str(new_count) + " / " + str(MAX_FISH)
 
 func on_update_fish_count(value: int):
 	count += value
@@ -16,4 +21,5 @@ func on_update_fish_count(value: int):
 		GameEvents.emit_life_added()
 		count = 0
 	
-	collected_fish_count.text = str(count) + " / " + str(MAX_FISH)
+	update_fish_count_label(count)
+	GameEvents.fish_count = count

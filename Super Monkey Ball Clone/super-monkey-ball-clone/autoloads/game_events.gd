@@ -16,6 +16,7 @@ var warp_count := 0
 var warp_used := false
 var is_within_half_level_time := false
 var time_remaining := 0.0
+var fish_count := 0
 
 func emit_life_added():
 	life_added.emit()
