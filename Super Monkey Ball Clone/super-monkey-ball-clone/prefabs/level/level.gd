@@ -4,6 +4,8 @@ extends Node3D
 @export var level_node: Node3D
 @export var level_parent: Node3D
 
+@onready var mini_map_cam: Camera3D = %MiniMapCam
+
 var angle := 15.0
 var spawn_position := Vector3.ZERO
 var default_speed := 0.4
@@ -18,6 +20,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	controller_process()
 	rotations_process(delta)
+	
+	mini_map_cam.global_position.x = character.global_position.x
+	mini_map_cam.global_position.z = character.global_position.z
 
 func controller_process() -> void:
 	var _rotate_x := 0.0
