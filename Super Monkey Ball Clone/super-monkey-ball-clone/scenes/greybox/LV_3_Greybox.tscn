@@ -57,3 +57,4 @@ unique_name_in_owner = true
 script = ExtResource("8_bh22m")
 
 [editable path="DeathZone"]
+[editable path="LevelParent/LV_3_Greybox"]

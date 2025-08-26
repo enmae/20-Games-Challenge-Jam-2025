@@ -1,12 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://bfpxhkyogowqm"]
+[gd_scene load_steps=15 format=3 uid="uid://bfpxhkyogowqm"]
 
 [ext_resource type="Script" uid="uid://bpoww2s6ab3ny" path="res://prefabs/level/level.gd" id="1_2gdjr"]
 [ext_resource type="PackedScene" uid="uid://bfywu8if32nt2" path="res://prefabs/character/character.tscn" id="2_kpsem"]
 [ext_resource type="PackedScene" uid="uid://c8fgapv0b0xay" path="res://prefabs/death_zone/death_zone.tscn" id="3_jdto8"]
 [ext_resource type="PackedScene" uid="uid://ynxhpflixwav" path="res://prefabs/ui/hud/hud.tscn" id="4_3dx0f"]
 [ext_resource type="PackedScene" uid="uid://j27r247mmmv8" path="res://prefabs/ui/hud/level_timer.tscn" id="5_remaf"]
+[ext_resource type="PackedScene" uid="uid://bv4u8bla53g1d" path="res://prefabs/level/warps/warps.tscn" id="7_3dx0f"]
 [ext_resource type="PackedScene" uid="uid://hxj6e6lws5ka" path="res://assets/models/greybox/LV_2_Greybox.gltf" id="7_4t8yj"]
+[ext_resource type="PackedScene" uid="uid://dg2tjeo0eo4rf" path="res://prefabs/collectables/fish/fish.tscn" id="7_jdto8"]
+[ext_resource type="PackedScene" uid="uid://dbiqt10urxte5" path="res://prefabs/level/level_goal_area/level_goal_area.tscn" id="8_3dx0f"]
 [ext_resource type="Script" uid="uid://dner0h0fgbljh" path="res://addons/free_look_cam/free_look_camera.gd" id="8_35vv1"]
+[ext_resource type="PackedScene" uid="uid://ot252a6fioub" path="res://prefabs/level/start_area/start_area.tscn" id="9_remaf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_62ugy"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -41,6 +45,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.260
 [node name="DeathZone" parent="." instance=ExtResource("3_jdto8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5253, -43.1151, -5.52898)
 
+[node name="CollisionShape3D" parent="DeathZone" index="0"]
+visible = false
+
 [node name="HUD" parent="." instance=ExtResource("4_3dx0f")]
 unique_name_in_owner = true
 
@@ -51,8 +58,148 @@ unique_name_in_owner = true
 
 [node name="LV_2_Greybox" parent="LevelParent" instance=ExtResource("7_4t8yj")]
 
+[node name="Warps" parent="LevelParent/LV_2_Greybox" instance=ExtResource("7_3dx0f")]
+
+[node name="FirstWarp" parent="LevelParent/LV_2_Greybox/Warps" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.1399, 1.87042, 2.52788)
+
+[node name="SecondWarp" parent="LevelParent/LV_2_Greybox/Warps" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7288, 0.429478, -35.2058)
+
+[node name="Fishies" type="Node3D" parent="LevelParent/LV_2_Greybox"]
+
+[node name="Fish" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, 3.1069, 0.75694, 3.66598)
+
+[node name="Fish2" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, 3.1069, 0.75694, 1.88717)
+
+[node name="Fish3" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, 3.1069, 0.75694, -1.57618)
+
+[node name="Fish4" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, 3.1069, 0.75694, -3.26937)
+
+[node name="Fish5" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, 1.45976, 0.75694, 3.66598)
+
+[node name="Fish6" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, 1.45976, 0.75694, 1.88717)
+
+[node name="Fish7" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, 1.45976, 0.75694, -1.57618)
+
+[node name="Fish8" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, 1.45976, 0.75694, -3.26937)
+
+[node name="Fish9" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -0.14792, 0.75694, 3.66598)
+
+[node name="Fish10" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -0.14792, 0.75694, 1.88717)
+
+[node name="Fish11" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -0.14792, 0.75694, -1.57618)
+
+[node name="Fish12" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -0.14792, 0.75694, -3.26937)
+
+[node name="Fish13" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -1.55634, 0.75694, 3.66598)
+
+[node name="Fish14" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -1.55634, 0.75694, 1.88717)
+
+[node name="Fish15" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -1.55634, 0.75694, -1.57618)
+
+[node name="Fish16" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -1.55634, 0.75694, -3.26937)
+
+[node name="Fish17" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -3.13625, 0.75694, 3.66598)
+
+[node name="Fish18" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -3.13625, 0.75694, 1.88717)
+
+[node name="Fish19" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -3.13625, 0.75694, -1.57618)
+
+[node name="Fish20" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -3.13625, 0.75694, -3.26937)
+
+[node name="Fish21" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -4.69165, 0.75694, 3.66598)
+
+[node name="Fish22" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -4.69165, 0.75694, 1.88717)
+
+[node name="Fish23" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -4.69165, 0.75694, -1.57618)
+
+[node name="Fish24" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -4.69165, 0.75694, -3.26937)
+
+[node name="Fish25" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -4.82829, 0.656868, 0.146864)
+
+[node name="Fish26" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -3.2958, 0.656868, 0.146864)
+
+[node name="Fish27" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -1.62348, 0.656868, 0.146864)
+
+[node name="Fish28" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -0.165021, 0.656868, 0.146864)
+
+[node name="Fish29" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, 1.40701, 0.656868, 0.146864)
+
+[node name="Fish30" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, 2.99015, 0.656868, 0.146864)
+
+[node name="Fish31" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -9.31377, 0.656868, 1.84299)
+
+[node name="Fish32" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -15.2871, 0.656868, -1.62257)
+
+[node name="Fish33" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -22.0875, 0.656868, -3.71687)
+
+[node name="Fish34" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -22.0875, -0.2551, -10.9287)
+
+[node name="Fish35" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -22.0875, -0.2551, -27.4454)
+
+[node name="Fish36" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -25.5106, 0.368647, -35.3285)
+
+[node name="Fish37" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -27.8119, -0.157432, -35.3285)
+
+[node name="Fish38" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -30.1094, -0.680567, -35.3285)
+
+[node name="Fish39" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -32.4305, -1.26317, -35.3285)
+
+[node name="Fish40" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -35.2756, -1.8902, -35.3285)
+
+[node name="Fish41" parent="LevelParent/LV_2_Greybox/Fishies" instance=ExtResource("7_jdto8")]
+transform = Transform3D(0.999993, 0, 0.00370009, 0, 1, 0, -0.00370009, 0, 0.999993, -37.8553, -2.40736, -35.3285)
+
+[node name="LevelGoalArea" parent="LevelParent/LV_2_Greybox" instance=ExtResource("8_3dx0f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.0955, -3.78005, -35.1235)
+
+[node name="StartArea" parent="LevelParent/LV_2_Greybox" instance=ExtResource("9_remaf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.8289, 3.50782, 0)
+
 [node name="Camera3D" type="Camera3D" parent="."]
 script = ExtResource("8_35vv1")
 
 [editable path="DeathZone"]
 [editable path="LevelParent/LV_2_Greybox"]
+[editable path="LevelParent/LV_2_Greybox/Warps"]

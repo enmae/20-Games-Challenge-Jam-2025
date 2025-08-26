@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dxbnjxgxls04v"]
+[gd_scene load_steps=14 format=3 uid="uid://dxbnjxgxls04v"]
 
 [ext_resource type="Script" uid="uid://bpoww2s6ab3ny" path="res://prefabs/level/level.gd" id="1_afpyl"]
 [ext_resource type="PackedScene" uid="uid://bfywu8if32nt2" path="res://prefabs/character/character.tscn" id="2_efbwn"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://j27r247mmmv8" path="res://prefabs/ui/hud/level_timer.tscn" id="5_kd8mf"]
 [ext_resource type="PackedScene" uid="uid://d1hhxpvkfxl34" path="res://assets/models/greybox/LV_1_Greybox.gltf" id="6_afpyl"]
 [ext_resource type="PackedScene" uid="uid://dbiqt10urxte5" path="res://prefabs/level/level_goal_area/level_goal_area.tscn" id="7_afpyl"]
+[ext_resource type="PackedScene" uid="uid://dg2tjeo0eo4rf" path="res://prefabs/collectables/fish/fish.tscn" id="7_rkrf0"]
 [ext_resource type="PackedScene" uid="uid://ot252a6fioub" path="res://prefabs/level/start_area/start_area.tscn" id="8_efbwn"]
 [ext_resource type="Script" uid="uid://dner0h0fgbljh" path="res://addons/free_look_cam/free_look_camera.gd" id="8_l000d"]
 
@@ -54,11 +55,61 @@ unique_name_in_owner = true
 
 [node name="LV_1_Greybox" parent="LevelParent" instance=ExtResource("6_afpyl")]
 
+[node name="Fishies" type="Node3D" parent="LevelParent/LV_1_Greybox"]
+
+[node name="Fish" parent="LevelParent/LV_1_Greybox/Fishies" instance=ExtResource("7_rkrf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2183, 0.3565, 0.289557)
+
+[node name="Fish2" parent="LevelParent/LV_1_Greybox/Fishies" instance=ExtResource("7_rkrf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.3392, -0.0949265, 0.289557)
+
+[node name="Fish3" parent="LevelParent/LV_1_Greybox/Fishies" instance=ExtResource("7_rkrf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.19276, -0.395844, 1.58204)
+
+[node name="Fish4" parent="LevelParent/LV_1_Greybox/Fishies" instance=ExtResource("7_rkrf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.41957, -0.395844, 1.58204)
+
+[node name="Fish5" parent="LevelParent/LV_1_Greybox/Fishies" instance=ExtResource("7_rkrf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.92554, -0.395844, 1.58204)
+
+[node name="Fish6" parent="LevelParent/LV_1_Greybox/Fishies" instance=ExtResource("7_rkrf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.19276, -0.395844, 0.240862)
+
+[node name="Fish7" parent="LevelParent/LV_1_Greybox/Fishies" instance=ExtResource("7_rkrf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.41957, -0.395844, 0.240862)
+
+[node name="Fish8" parent="LevelParent/LV_1_Greybox/Fishies" instance=ExtResource("7_rkrf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.92554, -0.395844, 0.240862)
+
+[node name="Fish9" parent="LevelParent/LV_1_Greybox/Fishies" instance=ExtResource("7_rkrf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.19276, -0.395844, -1.1097)
+
+[node name="Fish10" parent="LevelParent/LV_1_Greybox/Fishies" instance=ExtResource("7_rkrf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.41957, -0.395844, -1.1097)
+
+[node name="Fish11" parent="LevelParent/LV_1_Greybox/Fishies" instance=ExtResource("7_rkrf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.92554, -0.395844, -1.1097)
+
+[node name="Fish12" parent="LevelParent/LV_1_Greybox/Fishies" instance=ExtResource("7_rkrf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.77211, -0.395844, 5.08939)
+
+[node name="Fish13" parent="LevelParent/LV_1_Greybox/Fishies" instance=ExtResource("7_rkrf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.83891, -0.395844, -5.86316)
+
+[node name="Fish14" parent="LevelParent/LV_1_Greybox/Fishies" instance=ExtResource("7_rkrf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.83891, -0.395844, -0.262442)
+
+[node name="Fish15" parent="LevelParent/LV_1_Greybox/Fishies" instance=ExtResource("7_rkrf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.83891, -0.395844, 2.2231)
+
+[node name="Fish16" parent="LevelParent/LV_1_Greybox/Fishies" instance=ExtResource("7_rkrf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.83891, -0.395844, -2.86615)
+
 [node name="LevelGoalArea" parent="LevelParent/LV_1_Greybox" instance=ExtResource("7_afpyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.0018, -0.721633, 0.164842)
 
 [node name="StartArea" parent="LevelParent/LV_1_Greybox" instance=ExtResource("8_efbwn")]
-transform = Transform3D(0.0148871, 0, -0.999889, 0, 1, 0, 0.999889, 0, 0.0148871, 21.2178, 1.50742, -0.241346)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 21.7055, 1.507, 0.072)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 script = ExtResource("8_l000d")

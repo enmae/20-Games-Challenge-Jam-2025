@@ -1,9 +1,71 @@
-[gd_scene load_steps=4 format=3 uid="uid://dg2tjeo0eo4rf"]
+[gd_scene load_steps=7 format=3 uid="uid://dg2tjeo0eo4rf"]
 
 [ext_resource type="Script" uid="uid://dpj4nn1jgcbra" path="res://prefabs/collectables/fish/fish.gd" id="1_xlurk"]
 [ext_resource type="ArrayMesh" uid="uid://dbqjyul14lf00" path="res://assets/models/fish/fish_Mesh.res" id="2_36g2a"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_36g2a"]
+
+[sub_resource type="Animation" id="Animation_36g2a"]
+resource_name = "default"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0), Vector3(0, 3.14159, 0), Vector3(0, 6.28319, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(0.784584, 0.757858, 0.784584),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.5, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_73nod"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4b3wd"]
+_data = {
+&"RESET": SubResource("Animation_73nod"),
+&"default": SubResource("Animation_36g2a")
+}
 
 [node name="Fish" type="Area3D"]
 script = ExtResource("1_xlurk")
@@ -14,5 +76,11 @@ debug_color = Color(0, 0.6, 0.7, 0.42)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("2_36g2a")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4b3wd")
+}
+autoplay = "default"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
