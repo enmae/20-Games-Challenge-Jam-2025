@@ -7,7 +7,6 @@ extends Node3D
 var angle := 15.0
 var spawn_position := Vector3.ZERO
 var default_speed := 0.4
-var rotaters: Array[MeshInstance3D] = []
 
 func _ready() -> void:
 	spawn_position = character.global_position
@@ -15,9 +14,6 @@ func _ready() -> void:
 	GameEvents.last_played_level = get_tree().current_scene.scene_file_path
 	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	
-	for c in level_node.get_children():
-		if "Moving_Platform" in c.name:
 			rotaters.push_back(c)
 
 func _process(delta: float) -> void:
@@ -28,6 +24,7 @@ func controller_process() -> void:
 	var _rotate_x := 0.0
 	var _rotate_z := 0.0
 	var tilt_input := Vector2.ZERO
+	
 	if Input.is_action_pressed("left"):
 		_rotate_z = angle
 		tilt_input.x = -1
@@ -52,13 +49,21 @@ func controller_process() -> void:
 	
 	level_parent.position = character.global_position
 
+
+func set_rotaters(n: Node3D, delta) -> void:
+	for c in n.get_children():
+		if c is Node3D:
+			set_rotaters(c, delta)
+			if "Moving_Platform" in c.name:
+				var speed := default_speed
+				if c.has_meta("extras"):
+					var extras: Dictionary = c.get_meta("extras")
+					if "speed" in extras: speed = extras["speed"]
+				
+				c.rotation.y += delta * speed
+
 func rotations_process(delta: float) -> void:
-	for r in rotaters:
-		var speed := default_speed
-		if r.has_meta("extras"):
-			var extras: Dictionary = r.get_meta("extras")
-			if "speed" in extras: speed = extras["speed"]
-		r.rotation.y += delta * speed
+	set_rotaters(level_node, delta)
 
 func on_reset_player_position():
 	character.global_position = spawn_position
