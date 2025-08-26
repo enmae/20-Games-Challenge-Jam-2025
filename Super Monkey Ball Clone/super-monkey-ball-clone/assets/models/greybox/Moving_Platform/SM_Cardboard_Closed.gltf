@@ -15,20 +15,26 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"SM_Cardboard_Closed-convcol.002"
+			"name":"SM_Cardboard_Closed.001",
+			"scale":[
+				0.9000000357627869,
+				1,
+				1
+			]
 		}
 	],
 	"materials":[
 		{
 			"doubleSided":true,
 			"name":"M_Cardboard_Box.001",
+			"normalTexture":{
+				"index":0,
+				"scale":0.30000001192092896
+			},
 			"pbrMetallicRoughness":{
-				"baseColorFactor":[
-					0.8001194596290588,
-					0.3423791825771332,
-					0.19522276520729065,
-					1
-				],
+				"baseColorTexture":{
+					"index":1
+				},
 				"metallicFactor":0,
 				"roughnessFactor":0.5
 			}
@@ -48,6 +54,28 @@
 					"material":0
 				}
 			]
+		}
+	],
+	"textures":[
+		{
+			"sampler":0,
+			"source":0
+		},
+		{
+			"sampler":0,
+			"source":1
+		}
+	],
+	"images":[
+		{
+			"mimeType":"image/png",
+			"name":"M_Cardboard_Box.001_Normal",
+			"uri":"M_Cardboard_Box_001_Normal.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"M_Cardboard_Box.001_BaseColor",
+			"uri":"M_Cardboard_Box_001_BaseColor.png"
 		}
 	],
 	"accessors":[
@@ -110,6 +138,12 @@
 			"byteLength":72,
 			"byteOffset":768,
 			"target":34963
+		}
+	],
+	"samplers":[
+		{
+			"magFilter":9729,
+			"minFilter":9987
 		}
 	],
 	"buffers":[

@@ -17,43 +17,29 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"SM_Cardboard_Top_Flap.003",
-			"translation":[
-				0,
-				0,
-				131
-			]
+			"name":"SM_Cardboard_Top_Flap.003"
 		},
 		{
 			"mesh":1,
-			"name":"SM_Cardboard_Ramp-convcol.003",
-			"translation":[
-				0,
-				0,
-				131
-			]
+			"name":"SM_Cardboard_Ramp-convcol.003"
 		},
 		{
 			"mesh":2,
-			"name":"SM_Cardboard_Roof.003",
-			"translation":[
-				0,
-				0,
-				131
-			]
+			"name":"SM_Cardboard_Roof.003"
 		}
 	],
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"M_Cardboard_Box.001",
+			"name":"M_Cardboard_Box.002",
+			"normalTexture":{
+				"index":0,
+				"scale":0.30000001192092896
+			},
 			"pbrMetallicRoughness":{
-				"baseColorFactor":[
-					0.8001194596290588,
-					0.3423791825771332,
-					0.19522276520729065,
-					1
-				],
+				"baseColorTexture":{
+					"index":1
+				},
 				"metallicFactor":0,
 				"roughnessFactor":0.5
 			}
@@ -101,6 +87,28 @@
 					"material":0
 				}
 			]
+		}
+	],
+	"textures":[
+		{
+			"sampler":0,
+			"source":0
+		},
+		{
+			"sampler":0,
+			"source":1
+		}
+	],
+	"images":[
+		{
+			"mimeType":"image/png",
+			"name":"M_Cardboard_Box.001_Normal",
+			"uri":"M_Cardboard_Box_001_Normal.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"M_Cardboard_Box.001_BaseColor",
+			"uri":"M_Cardboard_Box_001_BaseColor.png"
 		}
 	],
 	"accessors":[
@@ -279,6 +287,12 @@
 			"byteLength":1512,
 			"byteOffset":12176,
 			"target":34963
+		}
+	],
+	"samplers":[
+		{
+			"magFilter":9729,
+			"minFilter":9987
 		}
 	],
 	"buffers":[

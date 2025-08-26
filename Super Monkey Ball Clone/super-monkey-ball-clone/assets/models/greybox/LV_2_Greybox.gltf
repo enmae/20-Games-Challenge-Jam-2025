@@ -2825,12 +2825,13 @@
 			},
 			"extensions":{
 				"KHR_materials_emissive_strength":{
-					"emissiveStrength":7.499999523162842
+					"emissiveStrength":5
 				}
 			},
 			"name":"M_Goal_Tree",
 			"normalTexture":{
-				"index":1
+				"index":1,
+				"scale":0.30000001192092896
 			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -2843,7 +2844,8 @@
 			"doubleSided":true,
 			"name":"M_Trims",
 			"normalTexture":{
-				"index":3
+				"index":3,
+				"scale":0.30000001192092896
 			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -2855,13 +2857,14 @@
 		{
 			"doubleSided":true,
 			"name":"M_Cardboard_Box.001",
+			"normalTexture":{
+				"index":5,
+				"scale":0.30000001192092896
+			},
 			"pbrMetallicRoughness":{
-				"baseColorFactor":[
-					0.8001194596290588,
-					0.3423791825771332,
-					0.19522276520729065,
-					1
-				],
+				"baseColorTexture":{
+					"index":6
+				},
 				"metallicFactor":0,
 				"roughnessFactor":0.5
 			}
@@ -2870,11 +2873,12 @@
 			"doubleSided":true,
 			"name":"M_Carpet",
 			"normalTexture":{
-				"index":5
+				"index":7,
+				"scale":0.30000001192092896
 			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":6
+					"index":8
 				},
 				"metallicFactor":0
 			}
@@ -3801,6 +3805,14 @@
 		{
 			"sampler":0,
 			"source":6
+		},
+		{
+			"sampler":0,
+			"source":7
+		},
+		{
+			"sampler":0,
+			"source":8
 		}
 	],
 	"images":[
@@ -3828,6 +3840,16 @@
 			"mimeType":"image/png",
 			"name":"T_Cat_Trimsheet_C",
 			"uri":"T_Cat_Trimsheet_C.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"M_Cardboard_Box.001_Normal",
+			"uri":"M_Cardboard_Box_001_Normal.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"M_Cardboard_Box.001_BaseColor",
+			"uri":"M_Cardboard_Box_001_BaseColor.png"
 		},
 		{
 			"mimeType":"image/png",
