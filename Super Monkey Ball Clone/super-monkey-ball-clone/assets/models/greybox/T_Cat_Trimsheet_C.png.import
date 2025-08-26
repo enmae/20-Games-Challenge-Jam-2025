@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqptmts52lvcl"
-path.s3tc="res://.godot/imported/T_Cat_Carpet_C.png-4dda55ad448a6786501bb8a545f5a267.s3tc.ctex"
+uid="uid://bcwh3yxhtsmrs"
+path.s3tc="res://.godot/imported/T_Cat_Trimsheet_C.png-b6390d864c3b22e6a755daabd9816268.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/greybox/T_Cat_Carpet_C.png"
-dest_files=["res://.godot/imported/T_Cat_Carpet_C.png-4dda55ad448a6786501bb8a545f5a267.s3tc.ctex"]
+source_file="res://assets/models/greybox/T_Cat_Trimsheet_C.png"
+dest_files=["res://.godot/imported/T_Cat_Trimsheet_C.png-b6390d864c3b22e6a755daabd9816268.s3tc.ctex"]
 
 [params]
 
