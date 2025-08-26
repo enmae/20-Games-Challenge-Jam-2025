@@ -16,38 +16,51 @@ func _ready() -> void:
 	GameEvents.last_played_level = get_tree().current_scene.scene_file_path
 	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
+	
+	GameEvents.level_completed.connect(level_completed)
+	
 func _process(delta: float) -> void:
 	controller_process()
 	rotations_process(delta)
 	
-	mini_map_cam.global_position.x = character.global_position.x
-	mini_map_cam.global_position.z = character.global_position.z
+	if is_instance_valid(mini_map_cam):
+		mini_map_cam.global_position.x = character.global_position.x
+		mini_map_cam.global_position.z = character.global_position.z
+
+var level_complete := false
+func level_completed() -> void:
+	level_complete = true
 
 func controller_process() -> void:
+	if level_complete: return
+	
 	var _rotate_x := 0.0
 	var _rotate_z := 0.0
 	var tilt_input := Vector2.ZERO
+	var angle_factor := 1.0
 	
 	if Input.is_action_pressed("left"):
 		_rotate_z = angle
 		tilt_input.x = -1
+		angle_factor = 0.0
 	elif Input.is_action_pressed("right"):
 		_rotate_z = -angle
 		tilt_input.x = 1
+		angle_factor = 0.0
 	elif Input.is_action_pressed("back"):
 		_rotate_x = angle
 		tilt_input.y = -1
 	elif Input.is_action_pressed("forward"):
 		_rotate_x = -angle
+		angle_factor = 1.5
 		tilt_input.y = 1
 	
 	level_node.position = -character.global_position
 	
 	var char_y := character.global_rotation.y
 	var rotated := tilt_input.rotated(char_y)
-	var target_x := rotated.y * angle
-	var target_z := rotated.x * angle
+	var target_x := rotated.y * angle * angle_factor
+	var target_z := rotated.x * angle * angle_factor
 	level_parent.rotation_degrees.x = lerpf(level_parent.rotation_degrees.x, target_x, 0.1)
 	level_parent.rotation_degrees.z = lerpf(level_parent.rotation_degrees.z, target_z, 0.1)
 	
