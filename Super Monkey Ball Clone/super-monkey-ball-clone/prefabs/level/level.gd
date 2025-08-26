@@ -14,7 +14,6 @@ func _ready() -> void:
 	GameEvents.last_played_level = get_tree().current_scene.scene_file_path
 	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-			rotaters.push_back(c)
 
 func _process(delta: float) -> void:
 	controller_process()
