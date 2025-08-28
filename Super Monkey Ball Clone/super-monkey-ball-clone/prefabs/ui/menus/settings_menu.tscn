@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://ho4tev8jrorm"]
+[gd_scene load_steps=2 format=3 uid="uid://ho4tev8jrorm"]
 
 [ext_resource type="Script" uid="uid://jbjo613uuml4" path="res://prefabs/ui/menus/settings_menu.gd" id="1_gefop"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gefop"]
-bg_color = Color(0.18359, 0.18359, 0.18359, 1)
 
 [node name="SettingsMenu" type="CanvasLayer"]
 process_mode = 3
@@ -22,7 +19,6 @@ offset_right = 361.0
 offset_bottom = 247.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_gefop")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 custom_minimum_size = Vector2(460, 460)

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4qq6ossnjq0c"]
+[gd_scene load_steps=3 format=3 uid="uid://b4qq6ossnjq0c"]
 
 [ext_resource type="Script" uid="uid://dkcm3tuk8iidf" path="res://prefabs/ui/lives/lives_ui.gd" id="1_ydl6n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ydl6n"]
 
 [node name="LivesUI" type="CanvasLayer"]
 script = ExtResource("1_ydl6n")
@@ -10,6 +12,7 @@ offset_left = 39.0
 offset_top = 92.0
 offset_right = 247.0
 offset_bottom = 140.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ydl6n")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2

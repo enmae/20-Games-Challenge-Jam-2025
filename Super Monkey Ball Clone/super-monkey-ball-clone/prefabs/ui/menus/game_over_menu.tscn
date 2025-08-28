@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfmisarp3pgdx"]
+[gd_scene load_steps=3 format=3 uid="uid://dfmisarp3pgdx"]
 
 [ext_resource type="Script" uid="uid://drxak5f6e6f7s" path="res://prefabs/ui/menus/game_over_menu.gd" id="1_o8u6s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o8u6s"]
 
 [node name="GameOverMenu" type="CanvasLayer"]
 script = ExtResource("1_o8u6s")
@@ -11,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_o8u6s")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 custom_minimum_size = Vector2(1100, 620)

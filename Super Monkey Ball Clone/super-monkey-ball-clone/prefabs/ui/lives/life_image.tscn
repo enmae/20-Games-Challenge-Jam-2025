@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://bi32ubar2jaq6"]
+[gd_scene load_steps=3 format=3 uid="uid://bi32ubar2jaq6"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_63dm3"]
-size = Vector2(32, 32)
+[ext_resource type="Texture2D" uid="uid://7vysjxcvwwcn" path="res://assets/ui/cat_life_icon.png" id="1_8ahcm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oijrm"]
+atlas = ExtResource("1_8ahcm")
+region = Rect2(32, 0, 32, 32)
 
 [node name="LifeImage" type="TextureRect"]
-texture = SubResource("PlaceholderTexture2D_63dm3")
+texture_filter = 1
+texture = SubResource("AtlasTexture_oijrm")
 stretch_mode = 4

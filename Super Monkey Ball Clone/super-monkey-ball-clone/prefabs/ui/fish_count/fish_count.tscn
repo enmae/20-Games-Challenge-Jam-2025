@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://bafghw5sjkie1"]
+[gd_scene load_steps=6 format=3 uid="uid://bafghw5sjkie1"]
 
 [ext_resource type="Script" uid="uid://c0eq1tbe2yg3c" path="res://prefabs/ui/fish_count/fish_count.gd" id="1_ph3eq"]
 [ext_resource type="Theme" uid="uid://bmelh2oq6r4tx" path="res://assets/themes/theme.tres" id="1_t5jqd"]
+[ext_resource type="Texture2D" uid="uid://ds73djtttdy5y" path="res://assets/ui/Fish.png" id="3_5w8j2"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ph3eq"]
-size = Vector2(32, 32)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5w8j2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lkxq"]
+atlas = ExtResource("3_5w8j2")
+region = Rect2(16, 16, 16, 16)
 
 [node name="FishCount" type="CanvasLayer"]
 script = ExtResource("1_ph3eq")
@@ -16,7 +20,7 @@ anchor_right = 1.0
 offset_left = -225.0
 offset_bottom = 82.0
 grow_horizontal = 0
-theme = ExtResource("1_t5jqd")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5w8j2")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2
@@ -36,8 +40,9 @@ layout_mode = 2
 theme_override_constants/separation = 8
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+texture_filter = 1
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_ph3eq")
+texture = SubResource("AtlasTexture_6lkxq")
 expand_mode = 2
 stretch_mode = 4
 

@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhhtuwihhbr1t"]
+[gd_scene load_steps=4 format=3 uid="uid://bhhtuwihhbr1t"]
 
 [ext_resource type="Script" uid="uid://0gr58gaxyfpp" path="res://prefabs/ui/score/total_score.gd" id="1_2lh8x"]
 [ext_resource type="Theme" uid="uid://bmelh2oq6r4tx" path="res://assets/themes/theme.tres" id="1_8tste"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2lh8x"]
 
 [node name="TotalScore" type="CanvasLayer"]
 script = ExtResource("1_2lh8x")
@@ -10,6 +12,7 @@ script = ExtResource("1_2lh8x")
 offset_right = 240.0
 offset_bottom = 95.0
 theme = ExtResource("1_8tste")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2lh8x")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2

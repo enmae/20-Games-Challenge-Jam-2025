@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://8pqkfrn85ol1"]
+[gd_scene load_steps=3 format=3 uid="uid://8pqkfrn85ol1"]
 
-[ext_resource type="Script" path="res://prefabs/ui/score/level_complete_ui.gd" id="1_sfaty"]
+[ext_resource type="Script" uid="uid://cyuoc6cwt7prp" path="res://prefabs/ui/score/level_complete_ui.gd" id="1_sfaty"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sfaty"]
 
 [node name="LevelCompleteUI" type="CanvasLayer"]
 script = ExtResource("1_sfaty")
@@ -14,6 +16,7 @@ offset_top = -18.5
 offset_bottom = 18.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_sfaty")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2

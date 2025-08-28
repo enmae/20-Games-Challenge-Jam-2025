@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwg0eubup1144"]
+[gd_scene load_steps=8 format=3 uid="uid://bwg0eubup1144"]
 
 [ext_resource type="Script" uid="uid://cxsr440768vly" path="res://prefabs/ui/menus/credits_text.gd" id="1_q6y77"]
+[ext_resource type="Theme" uid="uid://bmelh2oq6r4tx" path="res://assets/themes/theme.tres" id="2_jfvkd"]
 
 [sub_resource type="Animation" id="Animation_q6y77"]
 length = 0.001
@@ -30,7 +31,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 6, 12),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 650), Vector2(0, 0), Vector2(0, -630)]
+"values": [Vector2(0, 650), Vector2(0, 0), Vector2(0, -800)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -77,8 +78,12 @@ texture = SubResource("GradientTexture1D_vvsdk")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -21.0
+offset_bottom = 76.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_jfvkd")
+theme_type_variation = &"DarkPanelContainer"
 
 [node name="MarginContainer" type="MarginContainer" parent="CreditsContainer"]
 layout_mode = 2
@@ -136,7 +141,7 @@ text = "Michael"
 horizontal_alignment = 1
 
 [node name="Artists" type="MarginContainer" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer"]
-custom_minimum_size = Vector2(0, 174)
+custom_minimum_size = Vector2(0, 145)
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
@@ -160,6 +165,38 @@ layout_mode = 2
 [node name="Label" type="Label" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer/Artists/VBoxContainer/ProgrammerContainer"]
 layout_mode = 2
 text = "Michelle"
+horizontal_alignment = 1
+
+[node name="Assets" type="MarginContainer" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 185)
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer/Assets"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Section Heading" type="Label" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer/Assets/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Assets"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="AssetsContainer" type="VBoxContainer" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer/Assets/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer/Assets/VBoxContainer/AssetsContainer"]
+layout_mode = 2
+text = "Fish icon by Otterrisk"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer/Assets/VBoxContainer/AssetsContainer"]
+layout_mode = 2
+text = "Cat icon by ToffeCraft"
 horizontal_alignment = 1
 
 [node name="Thanks" type="Label" parent="CreditsContainer/MarginContainer/Credits and Thanks"]
