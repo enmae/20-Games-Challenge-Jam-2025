@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://csmb7pxt2h2i1"]
+[gd_scene load_steps=7 format=3 uid="uid://csmb7pxt2h2i1"]
 
 [ext_resource type="Script" uid="uid://dr1i700odooh2" path="res://scenes/title_screen/title_screen.gd" id="1_5df70"]
+[ext_resource type="PackedScene" uid="uid://4ubd8l0480a2" path="res://assets/models/cat/cat.gltf" id="2_ri6bm"]
+[ext_resource type="AudioStream" uid="uid://bgffivql0urs" path="res://assets/music/cat_title_screen.ogg" id="2_vuv2h"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xawky"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -14,8 +16,6 @@ background_mode = 2
 sky = SubResource("Sky_5df70")
 tonemap_mode = 2
 glow_enabled = true
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_ri6bm"]
 
 [node name="TitleScreen" type="Node3D"]
 script = ExtResource("1_5df70")
@@ -91,14 +91,48 @@ text = "Quit Game
 environment = SubResource("Environment_vuv2h")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+transform = Transform3D(0.949798, 0.30782, -0.0559587, -0.179912, 0.683698, 0.707241, 0.255962, -0.661668, 0.704755, -3.98182, 5.33582, 3.28455)
+light_energy = 0.5
 shadow_enabled = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60773, 0)
-mesh = SubResource("CapsuleMesh_ri6bm")
+[node name="cat2" parent="." instance=ExtResource("2_ri6bm")]
+transform = Transform3D(0.630445, 0, -0.776233, 0, 1, 0, 0.776233, 0, 0.630445, 2.02525, 1.29974, -0.599566)
+
+[node name="Skeleton3D" parent="cat2/Armature" index="0"]
+bones/0/position = Vector3(2.67439e-17, 0.0602367, 0.459989)
+bones/0/rotation = Quaternion(0.36957, -2.21539e-07, -8.81124e-08, 0.929203)
+bones/1/rotation = Quaternion(0.284445, -2.28571e-07, -2.03451e-07, 0.958692)
+bones/2/position = Vector3(1.33752e-17, 0.0602367, 0.459989)
+bones/2/rotation = Quaternion(-0.894917, -4.07901e-17, 4.70932e-17, 0.446233)
+bones/3/rotation = Quaternion(-0.662211, -0.130563, -0.142729, 0.723919)
+bones/4/rotation = Quaternion(-0.397054, -0.0877251, 0.155731, 0.900222)
+bones/5/rotation = Quaternion(-0.721368, 0.138053, 0.126364, 0.666785)
+bones/6/rotation = Quaternion(-0.278993, 0.0510254, -0.182454, 0.941419)
+bones/7/rotation = Quaternion(-0.106139, -0.0153325, -0.142148, 0.984019)
+bones/8/rotation = Quaternion(0.40806, 0.126578, -0.0125268, 0.904051)
+bones/9/rotation = Quaternion(0.229929, 0.0446106, 0.119279, 0.964839)
+bones/10/position = Vector3(1.16342e-08, 0.0602366, 0.459989)
+bones/10/rotation = Quaternion(0.97437, 0.223975, -0.00884737, 0.0189745)
+bones/11/rotation = Quaternion(0.0315131, 0.0177797, 0.137055, 0.989902)
+bones/12/position = Vector3(2.6143e-09, 0.0602366, 0.459989)
+bones/12/rotation = Quaternion(0.0764906, -0.00882344, 0.983624, 0.162958)
+bones/13/rotation = Quaternion(0.019793, -0.0391812, 0.108867, 0.993087)
+
+[node name="cat" parent="cat2/Armature/Skeleton3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.68924e-08, 0, 0.536386)
+
+[node name="AnimationPlayer" parent="cat2" index="1"]
+playback_default_blend_time = 0.3
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.895728, -0.131086, 0.424838, 0, 0.955547, 0.294839, -0.444602, -0.264096, 0.85591, 2.20687, 2.81913, 4.82448)
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_vuv2h")
+volume_db = -10.0
+autoplay = true
+bus = &"Music"
+
 [connection signal="pressed" from="MainMenu/TopNode/PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+
+[editable path="cat2"]

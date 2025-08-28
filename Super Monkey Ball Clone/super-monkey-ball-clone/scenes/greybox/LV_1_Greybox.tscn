@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dxbnjxgxls04v"]
+[gd_scene load_steps=16 format=3 uid="uid://dxbnjxgxls04v"]
 
 [ext_resource type="Script" uid="uid://bpoww2s6ab3ny" path="res://prefabs/level/level.gd" id="1_afpyl"]
 [ext_resource type="PackedScene" uid="uid://bfywu8if32nt2" path="res://prefabs/character/character.tscn" id="2_efbwn"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://ot252a6fioub" path="res://prefabs/level/start_area/start_area.tscn" id="8_efbwn"]
 [ext_resource type="Script" uid="uid://dner0h0fgbljh" path="res://addons/free_look_cam/free_look_camera.gd" id="8_l000d"]
 [ext_resource type="PackedScene" uid="uid://b6luol63hcn0u" path="res://prefabs/minimap/minimap.tscn" id="10_rkrf0"]
+[ext_resource type="Script" uid="uid://c41v3lmtlmiq3" path="res://prefabs/sounds/sounds.gd" id="11_8x7lp"]
+[ext_resource type="AudioStream" uid="uid://b5bg8ghal74gy" path="res://assets/music/cat_in_space.ogg" id="12_kd8mf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_62ugy"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -25,11 +27,12 @@ sky = SubResource("Sky_cb6wy")
 tonemap_mode = 2
 glow_enabled = true
 
-[node name="Greybox2" type="Node3D" node_paths=PackedStringArray("character", "level_node", "level_parent")]
+[node name="Greybox" type="Node3D" node_paths=PackedStringArray("character", "level_node", "level_parent", "mini_map_cam")]
 script = ExtResource("1_afpyl")
 character = NodePath("Character")
 level_node = NodePath("LevelParent/LV_1_Greybox")
 level_parent = NodePath("LevelParent")
+mini_map_cam = NodePath("SubViewportContainer/SubViewport/MiniMapCam")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_k5vq6")
@@ -118,5 +121,16 @@ script = ExtResource("8_l000d")
 
 [node name="SubViewportContainer" parent="." instance=ExtResource("10_rkrf0")]
 
+[node name="Sounds" type="Node" parent="."]
+script = ExtResource("11_8x7lp")
+level_music = ExtResource("12_kd8mf")
+level_volume_linear = 1.5
+
+[node name="BGMusic" type="AudioStreamPlayer" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("12_kd8mf")
+bus = &"Music"
+
 [editable path="DeathZone"]
 [editable path="LevelParent/LV_1_Greybox"]
+[editable path="SubViewportContainer"]
