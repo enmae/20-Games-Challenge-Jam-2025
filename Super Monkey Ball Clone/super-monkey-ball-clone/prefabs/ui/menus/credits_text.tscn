@@ -74,6 +74,17 @@ grow_vertical = 2
 theme = ExtResource("2_jfvkd")
 theme_type_variation = &"DarkPanelContainer"
 
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+color = Color(0.125911, 0.125911, 0.125911, 1)
+
 [node name="CreditsContainer" type="PanelContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0

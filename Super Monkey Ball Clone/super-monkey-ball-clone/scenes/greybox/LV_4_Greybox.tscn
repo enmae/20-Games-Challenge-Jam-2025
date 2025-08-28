@@ -26,11 +26,12 @@ sky = SubResource("Sky_cb6wy")
 tonemap_mode = 2
 glow_enabled = true
 
-[node name="Greybox" type="Node3D" node_paths=PackedStringArray("character", "level_node", "level_parent")]
+[node name="Greybox" type="Node3D" node_paths=PackedStringArray("character", "level_node", "level_parent", "mini_map_cam")]
 script = ExtResource("1_okv6d")
 character = NodePath("Character")
 level_node = NodePath("LevelParent/LV_4_Greybox")
 level_parent = NodePath("LevelParent")
+mini_map_cam = NodePath("SubViewportContainer/SubViewport/MiniMapCam")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_k5vq6")
@@ -449,3 +450,4 @@ script = ExtResource("8_8tn0r")
 
 [editable path="DeathZone"]
 [editable path="LevelParent/LV_4_Greybox"]
+[editable path="SubViewportContainer"]

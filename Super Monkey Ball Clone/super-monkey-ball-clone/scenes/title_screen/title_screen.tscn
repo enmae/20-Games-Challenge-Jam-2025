@@ -44,9 +44,16 @@ offset_right = 400.0
 offset_bottom = 120.0
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="MainMenu/TopNode/PanelContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="MainMenu/TopNode/PanelContainer"]
 layout_mode = 2
-color = Color(0, 0, 0, 1)
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="ColorRect" type="ColorRect" parent="MainMenu/TopNode/PanelContainer/MarginContainer2"]
+layout_mode = 2
+color = Color(0.125911, 0.125911, 0.125911, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="MainMenu/TopNode/PanelContainer"]
 layout_mode = 2
@@ -61,7 +68,8 @@ theme_override_constants/separation = 36
 
 [node name="Label" type="Label" parent="MainMenu/TopNode/PanelContainer/MarginContainer/VBoxContainer2"]
 layout_mode = 2
-text = "TITLE SCREEN"
+text = "Super Cat Yarn"
+horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/TopNode/PanelContainer/MarginContainer/VBoxContainer2"]
 layout_mode = 2
@@ -69,7 +77,7 @@ theme_override_constants/separation = 8
 
 [node name="StartButton" type="Button" parent="MainMenu/TopNode/PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
-text = "START DA GAME"
+text = "Start Game"
 
 [node name="SettingButton" type="Button" parent="MainMenu/TopNode/PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer"]
 unique_name_in_owner = true
