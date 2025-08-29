@@ -10,6 +10,8 @@ var angle := 15.0
 var spawn_position := Vector3.ZERO
 var default_speed := 0.4
 
+var rotaters: Array[Node3D] = []
+
 func _ready() -> void:
 	spawn_position = character.global_position
 	GameEvents.reset_player_position.connect(on_reset_player_position)
@@ -18,6 +20,8 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 	GameEvents.level_completed.connect(level_completed)
+	
+	get_rotaters(level_node)
 	
 func _process(delta: float) -> void:
 	controller_process()
@@ -67,17 +71,21 @@ func controller_process() -> void:
 	level_parent.position = character.global_position
 
 
-func set_rotaters(n: Node3D, delta) -> void:
+func get_rotaters(n: Node3D) -> void:
 	for c in n.get_children():
 		if c is Node3D:
-			set_rotaters(c, delta)
-			if "Moving_Platform" in c.name:
-				var speed := default_speed
-				if c.has_meta("extras"):
-					var extras: Dictionary = c.get_meta("extras")
-					if "speed" in extras: speed = extras["speed"]
-				
-				c.rotation.y += delta * speed
+			get_rotaters(c)
+			if "Moving_Platform" in c.name and c is MeshInstance3D:
+				rotaters.push_back(c)
+
+func set_rotaters(n: Node3D, delta) -> void:
+	for c in rotaters:
+		var speed := default_speed
+		if c.has_meta("extras"):
+			var extras: Dictionary = c.get_meta("extras")
+			if "speed" in extras: speed = extras["speed"]
+		
+		c.rotation.y += delta * speed
 
 func rotations_process(delta: float) -> void:
 	set_rotaters(level_node, delta)
