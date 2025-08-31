@@ -14,7 +14,7 @@
 
 [node name="TitleScreen" type="Node3D"]
 script = ExtResource("1_5df70")
-start_level = "res://scenes/greybox/LV_2_Greybox.tscn"
+start_level = "res://scenes/greybox/LV_1_Greybox.tscn"
 
 [node name="MainMenu" type="CanvasLayer" parent="."]
 
