@@ -20,4 +20,5 @@ func on_yes_button_pressed():
 
 func on_no_button_pressed():
 	reset()
+	GameEvents.reset_after_game_over()
 	get_tree().change_scene_to_file("res://scenes/title_screen/title_screen.tscn")

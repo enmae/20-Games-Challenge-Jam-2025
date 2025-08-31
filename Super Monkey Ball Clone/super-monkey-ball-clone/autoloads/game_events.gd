@@ -17,8 +17,17 @@ var warp_used := false
 var is_within_half_level_time := false
 var time_remaining := 0.0
 var fish_count := 0
+var lives := 0
 
 var warping := false
+
+func reset_after_game_over():
+	reset_for_next_level()
+	last_played_level = ""
+	lives = 0
+	continues = 3
+	total_score = 0
+	fish_count = 0
 
 func reset_for_next_level():
 	time_remaining = 0.0
