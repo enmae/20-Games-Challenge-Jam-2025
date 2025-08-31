@@ -26,6 +26,10 @@ func _process(delta: float) -> void:
 		anim = "running"
 		animation_player.speed_scale = 0.5 + smoothstep(0.0, 3.0, v) * 1.5
 	
+	if GameEvents.warping:
+		anim = "running"
+		animation_player.speed_scale = 3.5
+	
 	if animation_player.current_animation != anim:
 		animation_player.play(anim)
 	

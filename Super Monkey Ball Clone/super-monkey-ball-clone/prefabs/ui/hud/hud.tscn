@@ -1,10 +1,36 @@
-[gd_scene load_steps=6 format=3 uid="uid://ynxhpflixwav"]
+[gd_scene load_steps=12 format=3 uid="uid://ynxhpflixwav"]
 
 [ext_resource type="Script" uid="uid://cjumovlj551th" path="res://prefabs/ui/hud/hud.gd" id="1_dsf3i"]
 [ext_resource type="PackedScene" uid="uid://b4qq6ossnjq0c" path="res://prefabs/ui/lives/lives_ui.tscn" id="2_3f6uq"]
 [ext_resource type="PackedScene" uid="uid://bafghw5sjkie1" path="res://prefabs/ui/fish_count/fish_count.tscn" id="3_f7va4"]
 [ext_resource type="PackedScene" uid="uid://bhhtuwihhbr1t" path="res://prefabs/ui/score/total_score.tscn" id="4_16ybw"]
 [ext_resource type="PackedScene" uid="uid://clhfolea1jg30" path="res://prefabs/ui/speed_ui/speed_ui.tscn" id="5_3f6uq"]
+[ext_resource type="Shader" uid="uid://cdu75j1pp181w" path="res://shaders/warps.gdshader" id="6_f7va4"]
+[ext_resource type="Script" uid="uid://c41v3lmtlmiq3" path="res://prefabs/sounds/sounds.gd" id="7_mad5o"]
+[ext_resource type="AudioStream" uid="uid://b5bg8ghal74gy" path="res://assets/music/cat_in_space.ogg" id="8_gk73n"]
+[ext_resource type="AudioStream" uid="uid://b4pphq2eof1b" path="res://assets/music/jingles-steel_02.ogg" id="9_gk73n"]
+[ext_resource type="AudioStream" uid="uid://d3xok85we7nyd" path="res://assets/sound_effects/drop_002.ogg" id="10_5wwhf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_16ybw"]
+shader = ExtResource("6_f7va4")
+shader_parameter/hasNeonEffect = true
+shader_parameter/hasDot = true
+shader_parameter/haszExpend = false
+shader_parameter/theta = 67.5
+shader_parameter/addH = 42.7
+shader_parameter/scale = 0.0085
+shader_parameter/light_disperse = 1.9
+shader_parameter/stertch = 43.3
+shader_parameter/speed = 50.0
+shader_parameter/modTime = 34.3
+shader_parameter/rotate_speed = 0.0
+shader_parameter/rotate_plane_speed = 7.4506e-07
+shader_parameter/theta_sine_change_speed = 0.0
+shader_parameter/iswhite = false
+shader_parameter/isdarktotransparent = true
+shader_parameter/bemask = false
+shader_parameter/m = 8
+shader_parameter/n = 20
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_dsf3i")
@@ -20,3 +46,29 @@ unique_name_in_owner = true
 
 [node name="SpeedUI" parent="." instance=ExtResource("5_3f6uq")]
 unique_name_in_owner = true
+
+[node name="Flash" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_16ybw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sounds" type="Node" parent="."]
+script = ExtResource("7_mad5o")
+level_music = ExtResource("8_gk73n")
+level_volume_linear = 1.5
+
+[node name="BGMusic" type="AudioStreamPlayer" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("8_gk73n")
+bus = &"Music"
+
+[node name="LevelFinish" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("9_gk73n")
+
+[node name="Fish" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("10_5wwhf")
+pitch_scale = 1.2

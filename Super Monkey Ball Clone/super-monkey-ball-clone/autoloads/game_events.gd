@@ -18,6 +18,8 @@ var is_within_half_level_time := false
 var time_remaining := 0.0
 var fish_count := 0
 
+var warping := false
+
 func reset_for_next_level():
 	time_remaining = 0.0
 	is_within_half_level_time = false

@@ -11,6 +11,7 @@ var spawn_position := Vector3.ZERO
 var default_speed := 0.4
 
 var rotaters: Array[Node3D] = []
+var cardboard: Array[Node3D] = []
 
 func _ready() -> void:
 	spawn_position = character.global_position
@@ -70,15 +71,22 @@ func controller_process() -> void:
 	
 	level_parent.position = character.global_position
 
-
+var move_length := 10.0
+var move_speed := 0.5
 func get_rotaters(n: Node3D) -> void:
 	for c in n.get_children():
 		if c is Node3D:
 			get_rotaters(c)
-			if "Moving_Platform" in c.name and c is MeshInstance3D:
-				rotaters.push_back(c)
+			if c is MeshInstance3D:
+				if "Cardboard_Closed" in c.name:
+					c.set_meta("original_pos", c.global_position)
+					c.set_meta("rand_offset", rng.randf_range(-move_length, move_length))
+					cardboard.push_back(c)
+				if "Moving_Platform" in c.name:
+					rotaters.push_back(c)
 
-func set_rotaters(n: Node3D, delta) -> void:
+var rng := RandomNumberGenerator.new()
+func move_objects(delta) -> void:
 	for c in rotaters:
 		var speed := default_speed
 		if c.has_meta("extras"):
@@ -86,9 +94,14 @@ func set_rotaters(n: Node3D, delta) -> void:
 			if "speed" in extras: speed = extras["speed"]
 		
 		c.rotation.y += delta * speed
+	
+	for c in cardboard:
+		var original_pos: Vector3 = c.get_meta("original_pos")
+		var rand_offset: float = c.get_meta("rand_offset")
+		c.position.z = original_pos.z + 5.0*sin(0.5 * Time.get_ticks_msec() / 1000.0 + rand_offset)
 
 func rotations_process(delta: float) -> void:
-	set_rotaters(level_node, delta)
+	move_objects(delta)
 
 func on_reset_player_position():
 	character.global_position = spawn_position

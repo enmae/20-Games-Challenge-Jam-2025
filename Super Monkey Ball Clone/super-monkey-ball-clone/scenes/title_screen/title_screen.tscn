@@ -1,21 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://csmb7pxt2h2i1"]
+[gd_scene load_steps=12 format=3 uid="uid://csmb7pxt2h2i1"]
 
 [ext_resource type="Script" uid="uid://dr1i700odooh2" path="res://scenes/title_screen/title_screen.gd" id="1_5df70"]
+[ext_resource type="Environment" uid="uid://dfo4sbra52pot" path="res://shaders/environment.tres" id="2_d6x3v"]
 [ext_resource type="PackedScene" uid="uid://4ubd8l0480a2" path="res://assets/models/cat/cat.gltf" id="2_ri6bm"]
 [ext_resource type="AudioStream" uid="uid://bgffivql0urs" path="res://assets/music/cat_title_screen.ogg" id="2_vuv2h"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xawky"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-
-[sub_resource type="Sky" id="Sky_5df70"]
-sky_material = SubResource("ProceduralSkyMaterial_xawky")
-
-[sub_resource type="Environment" id="Environment_vuv2h"]
-background_mode = 2
-sky = SubResource("Sky_5df70")
-tonemap_mode = 2
-glow_enabled = true
+[ext_resource type="ArrayMesh" uid="uid://dbqjyul14lf00" path="res://assets/models/fish/fish_Mesh.res" id="5_xetrx"]
+[ext_resource type="ArrayMesh" uid="uid://d1f48l0kkxw5f" path="res://assets/models/warp/SM_Warp_Highpoly_SM_Goal_Base_006.res" id="6_yepnq"]
+[ext_resource type="PackedScene" uid="uid://d1hhxpvkfxl34" path="res://assets/models/greybox/LV_1_Greybox.gltf" id="7_4u6ih"]
+[ext_resource type="PackedScene" uid="uid://hxj6e6lws5ka" path="res://assets/models/greybox/LV_2_Greybox.gltf" id="8_v2f8g"]
+[ext_resource type="PackedScene" uid="uid://b4dd2cmvrohxf" path="res://assets/models/greybox/LV_3_Greybox.gltf" id="9_k2vsc"]
+[ext_resource type="PackedScene" uid="uid://bnafch111wg8h" path="res://assets/models/greybox/LV_4_Greybox.gltf" id="10_aihkd"]
+[ext_resource type="PackedScene" uid="uid://orsq68cvqgv4" path="res://assets/models/greybox/LV_5_Greybox.gltf" id="11_seoxh"]
 
 [node name="TitleScreen" type="Node3D"]
 script = ExtResource("1_5df70")
@@ -95,14 +90,6 @@ layout_mode = 2
 text = "Quit Game
 "
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_vuv2h")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.949798, 0.30782, -0.0559587, -0.179912, 0.683698, 0.707241, 0.255962, -0.661668, 0.704755, -3.98182, 5.33582, 3.28455)
-light_energy = 0.5
-shadow_enabled = true
-
 [node name="cat2" parent="." instance=ExtResource("2_ri6bm")]
 transform = Transform3D(0.630445, 0, -0.776233, 0, 1, 0, 0.776233, 0, 0.630445, 2.02525, 1.29974, -0.599566)
 
@@ -140,6 +127,42 @@ stream = ExtResource("2_vuv2h")
 volume_db = -10.0
 autoplay = true
 bus = &"Music"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("2_d6x3v")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.613258, -0.717634, 0.330026, 0.408136, 0.645608, 0.645458, -0.676269, -0.261136, 0.688817, 0, 15.0223, -6.72895)
+light_energy = 0.083
+shadow_enabled = true
+
+[node name="Node3D" type="Node3D" parent="."]
+visible = false
+
+[node name="FishMesh" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.0615, 24.571, 18.3961)
+mesh = ExtResource("5_xetrx")
+skeleton = NodePath("../..")
+
+[node name="SmWarpHighpolySmGoalBase006" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.8748, 11.7028, -4.04948)
+mesh = ExtResource("6_yepnq")
+skeleton = NodePath("../..")
+
+[node name="LV_1_Greybox2" parent="Node3D" instance=ExtResource("7_4u6ih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2718, 0, 0.297042)
+
+[node name="LV_2_Greybox2" parent="Node3D" instance=ExtResource("8_v2f8g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2718, 0, 0.297042)
+
+[node name="LV_3_Greybox2" parent="Node3D" instance=ExtResource("9_k2vsc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2718, 0, 0.297042)
+
+[node name="LV_4_Greybox2" parent="Node3D" instance=ExtResource("10_aihkd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2718, 0, 0.297042)
+
+[node name="LV_5_Greybox2" parent="Node3D" instance=ExtResource("11_seoxh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2718, 0, 0.297042)
 
 [connection signal="pressed" from="MainMenu/TopNode/PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://yc53wjagpg14"]
+[gd_scene load_steps=14 format=3 uid="uid://yc53wjagpg14"]
 
 [ext_resource type="Script" uid="uid://bpoww2s6ab3ny" path="res://prefabs/level/level.gd" id="1_6wbta"]
 [ext_resource type="PackedScene" uid="uid://bfywu8if32nt2" path="res://prefabs/character/character.tscn" id="2_jcx31"]
@@ -12,19 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ot252a6fioub" path="res://prefabs/level/start_area/start_area.tscn" id="9_lhrau"]
 [ext_resource type="PackedScene" uid="uid://dbiqt10urxte5" path="res://prefabs/level/level_goal_area/level_goal_area.tscn" id="10_u6rkb"]
 [ext_resource type="PackedScene" uid="uid://b6luol63hcn0u" path="res://prefabs/minimap/minimap.tscn" id="12_62c7k"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_62ugy"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-
-[sub_resource type="Sky" id="Sky_cb6wy"]
-sky_material = SubResource("ProceduralSkyMaterial_62ugy")
-
-[sub_resource type="Environment" id="Environment_k5vq6"]
-background_mode = 2
-sky = SubResource("Sky_cb6wy")
-tonemap_mode = 2
-glow_enabled = true
+[ext_resource type="Environment" uid="uid://dfo4sbra52pot" path="res://shaders/environment.tres" id="13_lhrau"]
 
 [node name="Greybox" type="Node3D" node_paths=PackedStringArray("character", "level_node", "level_parent", "mini_map_cam")]
 script = ExtResource("1_6wbta")
@@ -32,15 +20,6 @@ character = NodePath("Character")
 level_node = NodePath("LevelParent/LV_3_Greybox")
 level_parent = NodePath("LevelParent")
 mini_map_cam = NodePath("SubViewportContainer/SubViewport/MiniMapCam")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_k5vq6")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 14, 0)
-light_color = Color(0.988235, 1, 0.243137, 1)
-light_energy = 0.255
-shadow_enabled = true
 
 [node name="Character" parent="." instance=ExtResource("2_jcx31")]
 unique_name_in_owner = true
@@ -499,15 +478,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0502, -3.88204, -14.6759)
 [node name="Warps" parent="LevelParent/LV_3_Greybox/Warp List" instance=ExtResource("8_62c7k")]
 
 [node name="FirstWarp" parent="LevelParent/LV_3_Greybox/Warp List/Warps" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6429, 7.05744, 32.9764)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.6441, 7.05744, 32.9764)
+
+[node name="FirstWarpMesh" parent="LevelParent/LV_3_Greybox/Warp List/Warps/FirstWarp" index="1"]
+transform = Transform3D(8.21595e-16, -1.87959e-08, 0.43, -0.43, -1.87959e-08, 0, 1.87959e-08, -0.43, -1.87959e-08, 2.2453, -1.42, -0.098999)
 
 [node name="SecondWarp" parent="LevelParent/LV_3_Greybox/Warp List/Warps" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.804336, 1.85665, 5.19284)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.804336, 2.04225, 5.19284)
+
+[node name="SecondWarpMesh" parent="LevelParent/LV_3_Greybox/Warp List/Warps/SecondWarp" index="0"]
+transform = Transform3D(8.21595e-16, -1.87959e-08, 0.43, -0.43, -1.87959e-08, 0, 1.87959e-08, -0.43, -1.87959e-08, -1.38157, -0.482802, 0.0221272)
+visible = true
 
 [node name="Warps2" parent="LevelParent/LV_3_Greybox/Warp List" instance=ExtResource("8_62c7k")]
 
 [node name="FirstWarp" parent="LevelParent/LV_3_Greybox/Warp List/Warps2" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.24446, -1.36461, -8.83578)
+
+[node name="FirstWarpMesh" parent="LevelParent/LV_3_Greybox/Warp List/Warps2/FirstWarp" index="1"]
+transform = Transform3D(-1.87959e-08, 0.43, 0, -0.43, -1.87959e-08, 0, 0, 0, 0.43, 0, -0.311009, 1.61132)
 
 [node name="SecondWarp" parent="LevelParent/LV_3_Greybox/Warp List/Warps2" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2559, -4.16259, -3.85278)
@@ -522,6 +511,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5538, -3.88291, -30.2037)
 script = ExtResource("8_bh22m")
 
 [node name="SubViewportContainer" parent="." instance=ExtResource("12_62c7k")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("13_lhrau")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.613258, -0.717634, 0.330026, 0.408136, 0.645608, 0.645458, -0.676269, -0.261136, 0.688817, 0, 15.0223, -6.72895)
+light_energy = 0.083
+shadow_enabled = true
 
 [editable path="DeathZone"]
 [editable path="LevelParent/LV_3_Greybox"]
