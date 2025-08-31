@@ -8,19 +8,181 @@
 		{
 			"name":"Scene",
 			"nodes":[
-				0
+				32
 			]
 		}
 	],
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"Fish"
+			"name":"Fish_Lowpoly.001",
+			"rotation":[
+				0,
+				-0.7071068286895752,
+				0,
+				0.7071068286895752
+			]
+		},
+		{
+			"name":"Catree"
+		},
+		{
+			"name":"Bridge"
+		},
+		{
+			"name":"Ramps"
+		},
+		{
+			"name":"Moving Platforms"
+		},
+		{
+			"name":"Moving_platform"
+		},
+		{
+			"name":"Cardboard.001"
+		},
+		{
+			"name":"Cat_House.002"
+		},
+		{
+			"name":"Platform.003"
+		},
+		{
+			"name":"Ramp.003"
+		},
+		{
+			"name":"Scratch_Post.002"
+		},
+		{
+			"name":"Trim.003"
+		},
+		{
+			"children":[
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11
+			],
+			"name":"LV_1_Greybox"
+		},
+		{
+			"name":"cardboard"
+		},
+		{
+			"name":"Platform.002"
+		},
+		{
+			"name":"Scratch_Post.001"
+		},
+		{
+			"children":[
+				13,
+				14,
+				15
+			],
+			"name":"LV_2_Greybox"
+		},
+		{
+			"name":"Tunnel.001"
+		},
+		{
+			"name":"Cat_House.001"
+		},
+		{
+			"name":"Ramp.001"
+		},
+		{
+			"name":"Trim.001"
+		},
+		{
+			"children":[
+				17,
+				18,
+				19,
+				20
+			],
+			"name":"LV_3_Greybox"
+		},
+		{
+			"name":"Cardboard"
+		},
+		{
+			"name":"Goal_Post.001"
+		},
+		{
+			"name":"Ramp"
+		},
+		{
+			"name":"ScratchPosts"
+		},
+		{
+			"children":[
+				22,
+				23,
+				24,
+				25
+			],
+			"name":"LV_4_Greybox"
+		},
+		{
+			"name":"Tunnel.002"
+		},
+		{
+			"name":"Trims.001"
+		},
+		{
+			"name":"Ramps.001"
+		},
+		{
+			"name":"Goal_Post"
+		},
+		{
+			"children":[
+				27,
+				28,
+				29,
+				30
+			],
+			"name":"LV_5_Greybox"
+		},
+		{
+			"children":[
+				0,
+				1,
+				2,
+				3,
+				4,
+				12,
+				16,
+				21,
+				26,
+				31
+			],
+			"name":"Scene Collection"
+		}
+	],
+	"materials":[
+		{
+			"doubleSided":true,
+			"name":"Fish",
+			"normalTexture":{
+				"index":0,
+				"scale":0.30000001192092896
+			},
+			"pbrMetallicRoughness":{
+				"baseColorTexture":{
+					"index":1
+				},
+				"metallicFactor":0
+			}
 		}
 	],
 	"meshes":[
 		{
-			"name":"Mesh",
+			"name":"Cube.014",
 			"primitives":[
 				{
 					"attributes":{
@@ -28,76 +190,105 @@
 						"NORMAL":1,
 						"TEXCOORD_0":2
 					},
-					"indices":3
+					"indices":3,
+					"material":0
 				}
 			]
+		}
+	],
+	"textures":[
+		{
+			"sampler":0,
+			"source":0
+		},
+		{
+			"sampler":0,
+			"source":1
+		}
+	],
+	"images":[
+		{
+			"mimeType":"image/png",
+			"name":"DefaultMaterial_Normal",
+			"uri":"DefaultMaterial_Normal.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"DefaultMaterial_BaseColor",
+			"uri":"DefaultMaterial_BaseColor.png"
 		}
 	],
 	"accessors":[
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":115,
+			"count":210,
 			"max":[
-				0.18688127398490906,
-				0.2290518879890442,
-				0.209252268075943
+				0.5268377661705017,
+				0.26790401339530945,
+				0.1632259339094162
 			],
 			"min":[
-				-0.18688125908374786,
-				-0.22905191779136658,
-				-0.628141462802887
+				-0.5802021026611328,
+				-0.26790404319763184,
+				-0.163225919008255
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":115,
+			"count":210,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":115,
+			"count":210,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":432,
+			"count":1032,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":1380,
+			"byteLength":2520,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1380,
-			"byteOffset":1380,
+			"byteLength":2520,
+			"byteOffset":2520,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":920,
-			"byteOffset":2760,
+			"byteLength":1680,
+			"byteOffset":5040,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":864,
-			"byteOffset":3680,
+			"byteLength":2064,
+			"byteOffset":6720,
 			"target":34963
+		}
+	],
+	"samplers":[
+		{
+			"magFilter":9729,
+			"minFilter":9987
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":4544,
+			"byteLength":8784,
 			"uri":"fish.bin"
 		}
 	]
