@@ -40,6 +40,66 @@ unique_name_in_owner = true
 
 [node name="LV_5_Greybox" parent="LevelParent" instance=ExtResource("6_k6fxr")]
 
+[node name="Bridge_038" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="0"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 6.96451, 11.9987)
+
+[node name="Bridge_039" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="1"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 6.96451, 11.9987)
+
+[node name="Bridge_040" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="2"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 6.96451, 11.9987)
+
+[node name="Bridge_041" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="3"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 6.96451, 11.9987)
+
+[node name="Bridge_042" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="4"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 6.96451, 11.9987)
+
+[node name="Bridge_043" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="5"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 6.96451, 11.9987)
+
+[node name="Bridge_044" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="6"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 6.96451, 11.9987)
+
+[node name="Bridge_045" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="7"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 6.96451, 11.9987)
+
+[node name="Bridge_046" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="8"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 6.96451, 11.9987)
+
+[node name="SM_Bridge_Planks041_001" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="9"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -21.0006, 5.82077, 14.3755)
+
+[node name="Bridge_047" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="10"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 7.01687, -6.50127)
+
+[node name="Bridge_048" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="11"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 7.01687, -6.50127)
+
+[node name="Bridge_049" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="12"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 7.01687, -6.50127)
+
+[node name="Bridge_050" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="13"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 7.01687, -6.50127)
+
+[node name="Bridge_051" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="14"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 7.01687, -6.50127)
+
+[node name="Bridge_052" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="15"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 7.01687, -6.50127)
+
+[node name="Bridge_053" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="16"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 7.01687, -6.50127)
+
+[node name="Bridge_054" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="17"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 7.01687, -6.50127)
+
+[node name="Bridge_055" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="18"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -23.7333, 7.01687, -6.50127)
+
+[node name="SM_Bridge_Planks041_002" parent="LevelParent/LV_5_Greybox/Scene Collection/LV_5_Greybox/Bridges" index="19"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, -21.0006, 5.91496, -4.12455)
+
 [node name="Warps" parent="LevelParent/LV_5_Greybox" instance=ExtResource("7_rcxx1")]
 
 [node name="FirstWarp" parent="LevelParent/LV_5_Greybox/Warps" index="0"]

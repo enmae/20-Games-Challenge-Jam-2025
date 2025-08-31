@@ -1,3 +1,4 @@
+// shader credit: https://godotshaders.com/shader/pbr-glass/
 shader_type spatial;
 render_mode diffuse_burley, specular_schlick_ggx, blend_mix;
 
