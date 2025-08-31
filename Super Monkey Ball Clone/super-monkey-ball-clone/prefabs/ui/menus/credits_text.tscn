@@ -89,7 +89,7 @@ color = Color(0.125911, 0.125911, 0.125911, 1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = 97.0
+offset_bottom = 102.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_jfvkd")
@@ -141,12 +141,12 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer/Programmers/VBoxContainer/ProgrammerContainer"]
 layout_mode = 2
-text = "Meaghan"
+text = "enmae"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer/Programmers/VBoxContainer/ProgrammerContainer"]
 layout_mode = 2
-text = "Michael"
+text = "michaeljared"
 horizontal_alignment = 1
 
 [node name="Artists" type="MarginContainer" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer"]
@@ -168,12 +168,17 @@ text = "Artists"
 horizontal_alignment = 1
 uppercase = true
 
-[node name="ProgrammerContainer" type="VBoxContainer" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer/Artists/VBoxContainer"]
+[node name="ArtContainer" type="VBoxContainer" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer/Artists/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer/Artists/VBoxContainer/ProgrammerContainer"]
+[node name="Label" type="Label" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer/Artists/VBoxContainer/ArtContainer"]
 layout_mode = 2
-text = "Michelle"
+text = "Cassowari"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer/Artists/VBoxContainer/ArtContainer"]
+layout_mode = 2
+text = "michaeljared"
 horizontal_alignment = 1
 
 [node name="Assets" type="MarginContainer" parent="CreditsContainer/MarginContainer/Credits and Thanks/VBoxContainer2/VBoxContainer"]
